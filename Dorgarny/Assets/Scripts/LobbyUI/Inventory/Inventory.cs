@@ -1,9 +1,13 @@
-﻿using System.Collections;
+﻿
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public const int createSlot = 10;
+    public GameObject prefab;
     public Transform rootSlot; // slotroot
     public Shop shop;
     private List<Slot> slots;
@@ -15,6 +19,8 @@ public class Inventory : MonoBehaviour
 
         slots = new List<Slot>();
         int slotCnt = rootSlot.childCount;
+
+        rootSlot.gameObject.AddComponent<GridLayout>();
 
         for (int i = 0; i < slotCnt; i++)
         {
@@ -63,5 +69,14 @@ public class Inventory : MonoBehaviour
     {
         active = !active;
         this.gameObject.SetActive(active);
+    }
+
+    public void CreateSlot()
+    {
+        for (int i = 0; i < createSlot; i++)
+        {
+            var slot = Instantiate(prefab).GetComponent<Slot>();
+            slots.Add(slot);
+        }
     }
 }
