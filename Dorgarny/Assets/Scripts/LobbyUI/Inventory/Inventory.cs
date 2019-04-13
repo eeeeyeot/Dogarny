@@ -10,17 +10,19 @@ public class Inventory : MonoBehaviour
     public GameObject prefab;
     public Transform rootSlot; // slotroot
     public Shop shop;
-    private List<Slot> slots;
+    private List<Slot> slots = new List<Slot>();
 
     bool active = false;
 
     void Start()
     {
+        Init();
+    }
 
-        slots = new List<Slot>();
+    public void Init()
+    {
         int slotCnt = rootSlot.childCount;
 
-        rootSlot.gameObject.AddComponent<GridLayout>();
 
         for (int i = 0; i < slotCnt; i++)
         {
@@ -31,19 +33,23 @@ public class Inventory : MonoBehaviour
         shop.onSlotClick += BuyItem;
     }
 
-    void BuyItem(ItemProperty item)
+    void BuyItem(ItemInfo item)
     {
         var emptySlot = slots.Find(t =>
         {
-            return t.item == null || t.item.itemName == string.Empty;
+            return t.item == null || t.item.name == string.Empty;
         });
 
         var haveSlot = slots.Find(t =>
-        {
-            return t.item.itemName == item.itemName && t.itemCount < 99;
-        });
+         {
+             if (t.item == null)
+                 return false;
 
-        if (haveSlot != null && item.itemtype != ItemType.Equipment)
+             return t.item.name == item.name && t.itemCount < 99;
+         });
+        
+
+        if (haveSlot != null && item.category == ItemInfo.Category.Potion)
         {
             if (haveSlot.itemCount > 99)
             {

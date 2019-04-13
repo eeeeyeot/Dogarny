@@ -6,27 +6,31 @@ public class Shop : MonoBehaviour
 {
 
     public Transform slotRoot;
-    public ItemData itemData;
     private List<Slot> slots;
+    public List<ItemInfo> shopItems = new List<ItemInfo>();
 
-    public System.Action<ItemProperty> onSlotClick;
+    public System.Action<ItemInfo> onSlotClick;
 
     bool active = false;
 
     void Start()
     {
-
+        ItemManager.Instance.Init();  // 나중에 매니저로 
         slots = new List<Slot>();
         int slotCnt = slotRoot.childCount;
+
+        shopItems.Add(ItemManager.Instance.Find("potion_heal_001"));
+        shopItems.Add(ItemManager.Instance.Find("potion_heal_002"));
+
 
         for (int i = 0; i < slotCnt; i++)
         {
             var slot = slotRoot.GetChild(i).GetComponent<Slot>();
 
-            if (i < itemData.items.Count)
+            if (i < shopItems.Count)
             {
-                slot.SetItem(itemData.items[i]);
-
+                
+                slot.SetItem(shopItems[i]);
             }
             else
             {
@@ -46,6 +50,7 @@ public class Shop : MonoBehaviour
     {
         if (onSlotClick != null)
         {
+            
             onSlotClick(slot.item);
         }
     }

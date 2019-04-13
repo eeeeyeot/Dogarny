@@ -391,14 +391,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1335507043}
   text_Count: {fileID: 999272538}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 484903451}
 --- !u!114 &29890537
 MonoBehaviour:
@@ -883,14 +879,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 665688483}
   text_Count: {fileID: 1842281838}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1140642847}
 --- !u!114 &54067829
 MonoBehaviour:
@@ -1462,14 +1454,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 502393432}
   text_Count: {fileID: 83050253}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 645323153}
 --- !u!114 &119217956
 MonoBehaviour:
@@ -1559,14 +1547,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1318208368}
   text_Count: {fileID: 711617545}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 612671073}
 --- !u!114 &123385016
 MonoBehaviour:
@@ -1735,14 +1719,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1340606433}
   text_Count: {fileID: 1457696980}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1188848101}
 --- !u!114 &163868211
 MonoBehaviour:
@@ -1907,14 +1887,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1815603730}
   text_Count: {fileID: 1090898721}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 2043750856}
 --- !u!114 &170918154
 MonoBehaviour:
@@ -2197,14 +2173,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1531561807}
   text_Count: {fileID: 976095119}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1075777137}
 --- !u!114 &190691225
 MonoBehaviour:
@@ -2294,14 +2266,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1594181362}
   text_Count: {fileID: 423368022}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1537948433}
 --- !u!114 &198866351
 MonoBehaviour:
@@ -2594,14 +2562,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 526682900}
   text_Count: {fileID: 2143209694}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1835657669}
 --- !u!114 &226688594
 MonoBehaviour:
@@ -3583,14 +3547,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 79879495}
   text_Count: {fileID: 281597372}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1379571365}
 --- !u!114 &338508681
 MonoBehaviour:
@@ -3680,14 +3640,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1412084416}
   text_Count: {fileID: 1119659034}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1550149012}
 --- !u!114 &355803726
 MonoBehaviour:
@@ -3777,14 +3733,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1273853189}
   text_Count: {fileID: 1222805769}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1539570748}
 --- !u!114 &360246258
 MonoBehaviour:
@@ -3936,7 +3888,7 @@ RectTransform:
   m_Father: {fileID: 1114395515}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5835725}
+  m_AnchorMin: {x: 0, y: 0.58357143}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -4035,14 +3987,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 470342971}
   text_Count: {fileID: 1093425095}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 2075400417}
 --- !u!114 &400261035
 MonoBehaviour:
@@ -4207,14 +4155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 242801189}
   text_Count: {fileID: 1730891190}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 489763542}
 --- !u!114 &407589868
 MonoBehaviour:
@@ -5020,14 +4964,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1163257132}
   text_Count: {fileID: 2062121233}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1171875628}
 --- !u!114 &461004649
 MonoBehaviour:
@@ -5381,7 +5321,7 @@ GameObject:
   - component: {fileID: 478265403}
   - component: {fileID: 478265402}
   m_Layer: 0
-  m_Name: ItemData
+  m_Name: ItemManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5396,18 +5336,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 478265401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a693633f87526ac4db99a79ba4b1facc, type: 3}
+  m_Script: {fileID: 11500000, guid: 50ee5e1e3176e674da79f23964f41d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - itemName: HpPotion
-    sprite: {fileID: 21300000, guid: 6b0b54ce51daa4c4095c9db557bec887, type: 3}
-    price: 500
-    itemtype: 2
-  - itemName: Fish
-    sprite: {fileID: 21300000, guid: ff22cfd7ab6fc4c0c9ce7586fefdc55f, type: 3}
-    price: 1000
-    itemtype: 1
 --- !u!4 &478265403
 Transform:
   m_ObjectHideFlags: 0
@@ -5755,7 +5686,6 @@ GameObject:
   m_Component:
   - component: {fileID: 489535034}
   - component: {fileID: 489535033}
-  - component: {fileID: 489535032}
   - component: {fileID: 489535031}
   - component: {fileID: 489535030}
   m_Layer: 0
@@ -5774,14 +5704,6 @@ AudioListener:
   m_GameObject: {fileID: 489535029}
   m_Enabled: 1
 --- !u!124 &489535031
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489535029}
-  m_Enabled: 1
---- !u!92 &489535032
 Behaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5815,7 +5737,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5839,7 +5761,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489535029}
   m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: -0.146, y: 1.66, z: -3.103}
+  m_LocalPosition: {x: -0.137, y: 1.66, z: -3.103}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6046,14 +5968,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1257852589}
   text_Count: {fileID: 1008428970}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 2071502560}
 --- !u!114 &497580856
 MonoBehaviour:
@@ -6609,14 +6527,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1042980583}
   text_Count: {fileID: 806119227}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1381735959}
 --- !u!114 &529647461
 MonoBehaviour:
@@ -6706,14 +6620,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1544463108}
   text_Count: {fileID: 289335659}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 887041630}
 --- !u!114 &530375494
 MonoBehaviour:
@@ -6803,14 +6713,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 837828079}
   text_Count: {fileID: 1694683616}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 736453815}
 --- !u!114 &543168412
 MonoBehaviour:
@@ -7042,6 +6948,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2728a4ecf9cfb6a44bbc792422f50492, type: 3}
+--- !u!1 &589703265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 589703266}
+  - component: {fileID: 589703268}
+  - component: {fileID: 589703267}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &589703266
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589703265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1715330477}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &589703267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589703265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: AAAA
+--- !u!222 &589703268
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589703265}
+  m_CullTransparentMesh: 0
 --- !u!224 &593114802 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6934476531693650154, guid: 2728a4ecf9cfb6a44bbc792422f50492,
@@ -8301,14 +8286,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1454220744}
   text_Count: {fileID: 1117669822}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1142386932}
 --- !u!114 &731989409
 MonoBehaviour:
@@ -9198,14 +9179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 732185396}
   text_Count: {fileID: 910822925}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 136590}
 --- !u!114 &809425547
 MonoBehaviour:
@@ -9256,6 +9233,7 @@ GameObject:
   - component: {fileID: 816395977}
   - component: {fileID: 816395976}
   - component: {fileID: 816395975}
+  - component: {fileID: 816395978}
   m_Layer: 5
   m_Name: HpPotion
   m_TagString: Untagged
@@ -9296,14 +9274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1966850045}
   text_Count: {fileID: 0}
+  text_Price: {fileID: 153673173}
   go_Countimage: {fileID: 0}
 --- !u!114 &816395976
 MonoBehaviour:
@@ -9342,6 +9316,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816395973}
   m_CullTransparentMesh: 0
+--- !u!114 &816395978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816395973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 816395976}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1239189434}
+        m_MethodName: OnClickSlot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 816395975}
+          m_ObjectArgumentAssemblyTypeName: Slot, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &822331995
 GameObject:
   m_ObjectHideFlags: 0
@@ -9592,14 +9619,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 630464885}
   text_Count: {fileID: 286410342}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1252361423}
 --- !u!114 &835382692
 MonoBehaviour:
@@ -10046,14 +10069,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 2137822261}
   text_Count: {fileID: 1224213589}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1600431612}
 --- !u!114 &855394080
 MonoBehaviour:
@@ -10607,14 +10626,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1352067521}
   text_Count: {fileID: 845724828}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1418577380}
 --- !u!114 &920105452
 MonoBehaviour:
@@ -10828,14 +10843,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 2065527917}
   text_Count: {fileID: 36678638}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 528586361}
 --- !u!114 &929903824
 MonoBehaviour:
@@ -11248,14 +11259,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 686139826}
   text_Count: {fileID: 1291275784}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1112726185}
 --- !u!114 &962511132
 MonoBehaviour:
@@ -11518,7 +11525,6 @@ GameObject:
   - component: {fileID: 972196760}
   - component: {fileID: 972196762}
   - component: {fileID: 972196761}
-  - component: {fileID: 972196763}
   m_Layer: 5
   m_Name: item
   m_TagString: Untagged
@@ -11582,59 +11588,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972196759}
   m_CullTransparentMesh: 0
---- !u!114 &972196763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972196759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 972196761}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1239189434}
-        m_MethodName: OnClickSlot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2080636172}
-          m_ObjectArgumentAssemblyTypeName: Slot, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &976095117
 GameObject:
   m_ObjectHideFlags: 0
@@ -11882,14 +11835,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 2136924975}
   text_Count: {fileID: 605787169}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 930424405}
 --- !u!114 &981431335
 MonoBehaviour:
@@ -12182,14 +12131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 255024473}
   text_Count: {fileID: 1957075016}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 2068383488}
 --- !u!114 &1002131648
 MonoBehaviour:
@@ -12353,14 +12298,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 2036512668}
   text_Count: {fileID: 632355771}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 822331995}
 --- !u!114 &1005877063
 MonoBehaviour:
@@ -12529,14 +12470,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 2002009946}
   text_Count: {fileID: 428255974}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1015011815}
 --- !u!114 &1010145621
 MonoBehaviour:
@@ -12626,14 +12563,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1569839099}
   text_Count: {fileID: 2074057510}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1222500944}
 --- !u!114 &1011763793
 MonoBehaviour:
@@ -12723,14 +12656,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 2102878975}
   text_Count: {fileID: 1191406329}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1670387678}
 --- !u!114 &1013005721
 MonoBehaviour:
@@ -13246,7 +13175,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 376362424}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.41642752
+  m_Size: 0.41642857
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13823,14 +13752,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1526186493}
   text_Count: {fileID: 431697586}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 910520014}
 --- !u!114 &1109509049
 MonoBehaviour:
@@ -14189,14 +14114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1676736691}
   text_Count: {fileID: 1394589292}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1398782050}
 --- !u!114 &1124919180
 MonoBehaviour:
@@ -14722,14 +14643,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 2087096504}
   text_Count: {fileID: 15479517}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 497142674}
 --- !u!114 &1157635217
 MonoBehaviour:
@@ -15177,6 +15094,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4451658552966536376, guid: 478a6f2cd46e0bb49b209d7b11a2623a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 478a6f2cd46e0bb49b209d7b11a2623a, type: 3}
 --- !u!1 &1188848101
@@ -15390,14 +15312,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 404124537}
   text_Count: {fileID: 445473712}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 170363711}
 --- !u!114 &1202427206
 MonoBehaviour:
@@ -16025,7 +15943,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotRoot: {fileID: 2132849479}
-  itemData: {fileID: 478265402}
 --- !u!1 &1248013306
 GameObject:
   m_ObjectHideFlags: 0
@@ -16231,14 +16148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1615629530}
   text_Count: {fileID: 1248013308}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1863690266}
 --- !u!114 &1255394066
 MonoBehaviour:
@@ -16695,14 +16608,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1180273581}
   text_Count: {fileID: 1694662255}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 367891564}
 --- !u!114 &1282114145
 MonoBehaviour:
@@ -17658,14 +17567,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 508670324}
   text_Count: {fileID: 1336880972}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 461120388}
 --- !u!114 &1363733931
 MonoBehaviour:
@@ -18253,7 +18158,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 291.49985}
-  m_SizeDelta: {x: 0, y: 1400}
+  m_SizeDelta: {x: 0, y: 1000}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1412084414
 GameObject:
@@ -18411,6 +18316,85 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 430655037}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1435300315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1435300318}
+  - component: {fileID: 1435300317}
+  - component: {fileID: 1435300316}
+  m_Layer: 5
+  m_Name: Text (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1435300316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435300315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: AAAA
+--- !u!222 &1435300317
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435300315}
+  m_CullTransparentMesh: 0
+--- !u!224 &1435300318
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435300315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1715330477}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1441773388
 GameObject:
   m_ObjectHideFlags: 0
@@ -18831,14 +18815,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1230315136}
   text_Count: {fileID: 980184234}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1138475389}
 --- !u!114 &1497107579
 MonoBehaviour:
@@ -19027,6 +19007,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531561805}
   m_CullTransparentMesh: 0
+--- !u!1 &1535532274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 162146, guid: 542bd041c640cf04e9a1a3d65afdc42f,
+    type: 3}
+  m_PrefabInstance: {fileID: 545034975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1535532276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535532274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb58acea4974f064ea541301db19403f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 589703267}
 --- !u!1 &1537948433
 GameObject:
   m_ObjectHideFlags: 0
@@ -19704,14 +19703,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 84112382}
   text_Count: {fileID: 1924486968}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1883539906}
 --- !u!114 &1571557864
 MonoBehaviour:
@@ -21061,14 +21056,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 500231143}
   text_Count: {fileID: 2039424122}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 888096969}
 --- !u!114 &1697551850
 MonoBehaviour:
@@ -21174,7 +21165,7 @@ Canvas:
   m_GameObject: {fileID: 1715330473}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -21202,6 +21193,9 @@ RectTransform:
   - {fileID: 1066638398}
   - {fileID: 1994058894}
   - {fileID: 1590197169}
+  - {fileID: 2024242417}
+  - {fileID: 589703266}
+  - {fileID: 1435300318}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22382,14 +22376,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1327789888}
   text_Count: {fileID: 100196739}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1369858661}
 --- !u!114 &1924822025
 MonoBehaviour:
@@ -22586,6 +22576,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957075014}
   m_CullTransparentMesh: 0
+--- !u!1 &1960395795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 125740, guid: d53dc7ab6a4fa3c4980bba7a384a1c6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1998852045}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1960395797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960395795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb58acea4974f064ea541301db19403f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 1435300316}
 --- !u!1 &1966850043
 GameObject:
   m_ObjectHideFlags: 0
@@ -22597,7 +22606,6 @@ GameObject:
   - component: {fileID: 1966850044}
   - component: {fileID: 1966850046}
   - component: {fileID: 1966850045}
-  - component: {fileID: 1966850047}
   m_Layer: 5
   m_Name: item
   m_TagString: Untagged
@@ -22661,59 +22669,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966850043}
   m_CullTransparentMesh: 0
---- !u!114 &1966850047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966850043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1966850045}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1239189434}
-        m_MethodName: OnClickSlot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 816395975}
-          m_ObjectArgumentAssemblyTypeName: Slot, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1968636242
 GameObject:
   m_ObjectHideFlags: 0
@@ -22765,14 +22720,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1216158387}
   text_Count: {fileID: 1096780212}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 173255427}
 --- !u!114 &1968636245
 MonoBehaviour:
@@ -23444,14 +23395,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1150203853}
   text_Count: {fileID: 839833747}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1169179265}
 --- !u!114 &2014704238
 MonoBehaviour:
@@ -23693,6 +23640,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2016652973}
   m_CullTransparentMesh: 0
+--- !u!1 &2024242414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2024242417}
+  - component: {fileID: 2024242416}
+  - component: {fileID: 2024242415}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2024242415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024242414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: AAAA
+--- !u!222 &2024242416
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024242414}
+  m_CullTransparentMesh: 0
+--- !u!224 &2024242417
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024242414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1715330477}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2025128973
 GameObject:
   m_ObjectHideFlags: 0
@@ -23943,14 +23969,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 897125443}
   text_Count: {fileID: 879395051}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1875047829}
 --- !u!114 &2031293308
 MonoBehaviour:
@@ -24143,6 +24165,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039424120}
   m_CullTransparentMesh: 0
+--- !u!1 &2040036050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 134548, guid: 6822a3e84271579448cb6de8366bfc47,
+    type: 3}
+  m_PrefabInstance: {fileID: 1269716043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2040036051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040036050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb58acea4974f064ea541301db19403f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 2024242415}
 --- !u!1 &2042693405
 GameObject:
   m_ObjectHideFlags: 0
@@ -24963,8 +25004,9 @@ GameObject:
   - component: {fileID: 2080636174}
   - component: {fileID: 2080636173}
   - component: {fileID: 2080636172}
+  - component: {fileID: 2080636175}
   m_Layer: 5
-  m_Name: Fish
+  m_Name: BigHpPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25003,14 +25045,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 972196761}
   text_Count: {fileID: 0}
+  text_Price: {fileID: 2016652975}
   go_Countimage: {fileID: 0}
 --- !u!114 &2080636173
 MonoBehaviour:
@@ -25049,6 +25087,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080636170}
   m_CullTransparentMesh: 0
+--- !u!114 &2080636175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080636170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2080636173}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1239189434}
+        m_MethodName: OnClickSlot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2080636172}
+          m_ObjectArgumentAssemblyTypeName: Slot, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2087096502
 GameObject:
   m_ObjectHideFlags: 0
@@ -25175,14 +25266,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 477010679}
   text_Count: {fileID: 429832572}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1636342145}
 --- !u!114 &2097662685
 MonoBehaviour:
@@ -25347,14 +25434,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 1603629927}
   text_Count: {fileID: 465713921}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 1689086371}
 --- !u!114 &2117685439
 MonoBehaviour:
@@ -25661,14 +25744,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca28e26b6f4bdaf409b678cd24e72f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-    itemName: 
-    sprite: {fileID: 0}
-    price: 0
-    itemtype: 0
   itemCount: 0
   image: {fileID: 764279846}
   text_Count: {fileID: 1225716472}
+  text_Price: {fileID: 0}
   go_Countimage: {fileID: 233362935}
 --- !u!114 &2138590700
 MonoBehaviour:
