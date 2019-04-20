@@ -3611,7 +3611,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -9975,7 +9975,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715177793}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -3.75, y: 0.43, z: 33.83}
+  m_LocalPosition: {x: -3.75, y: 2.34, z: 34.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1098459306}
@@ -12168,7 +12168,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.3
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -29013,6 +29013,7 @@ MonoBehaviour:
     isInteractable: 0
     stars: 0
   button: {fileID: 463899739}
+  perspectiveZoomSpeed: 0.5
 --- !u!4 &1812173681
 Transform:
   m_ObjectHideFlags: 0
