@@ -50,8 +50,12 @@ public class Shop : MonoBehaviour
     {
         if (onSlotClick != null)
         {
-            
-            onSlotClick(slot.item);
+            if (GoldManager.Instance.Gold >= slot.item.price)
+            {
+                Debug.Log(slot.item.price);
+                onSlotClick(slot.item);
+                GoldManager.Instance.Gold = -(slot.item.price);
+            }
         }
     }
 }

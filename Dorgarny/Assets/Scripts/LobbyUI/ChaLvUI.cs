@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterinfoUI : MonoBehaviour {
+public class ChaLvUI : MonoBehaviour {
     
     private Vector3 targetposition;
     public UnityEngine.UI.Text txt;

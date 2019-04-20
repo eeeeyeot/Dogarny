@@ -6,13 +6,12 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public const int createSlot = 10;
     public GameObject prefab;
     public Transform rootSlot; // slotroot
     public Shop shop;
     private List<Slot> slots = new List<Slot>();
 
-    bool active = false;
+    private bool active = false;
 
     void Start()
     {
@@ -30,10 +29,10 @@ public class Inventory : MonoBehaviour
             slots.Add(slot);
         }
 
-        shop.onSlotClick += BuyItem;
+        shop.onSlotClick += GiveItem;
     }
 
-    void BuyItem(ItemInfo item)
+    void GiveItem(ItemInfo item)
     {
         var emptySlot = slots.Find(t =>
         {
@@ -75,14 +74,5 @@ public class Inventory : MonoBehaviour
     {
         active = !active;
         this.gameObject.SetActive(active);
-    }
-
-    public void CreateSlot()
-    {
-        for (int i = 0; i < createSlot; i++)
-        {
-            var slot = Instantiate(prefab).GetComponent<Slot>();
-            slots.Add(slot);
-        }
     }
 }
