@@ -7,6 +7,9 @@ public class Skill : ScriptableObject
 {
 	new public string name = "New Skill";
 	public Sprite icon = null;
+	public float CoolingTime = 0f;
+	public float currentCoolTime = 0f;
+
 
 	public virtual void Use()
 	{

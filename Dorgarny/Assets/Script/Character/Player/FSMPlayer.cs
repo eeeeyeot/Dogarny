@@ -16,7 +16,6 @@ public class FSMPlayer : FSMBase
 	//public float attack = 40.0f;
 	//public float attackRange = 1.5f;
 
-
 	private void LateUpdate()
 	{
 		if (GetComponent<NavMeshAgent>().velocity != Vector3.zero)
@@ -27,7 +26,6 @@ public class FSMPlayer : FSMBase
 		{
 			CHState = CharacterState.Idle;
 		}
-
 	}
 
 	protected override IEnumerator Idle()
@@ -48,11 +46,6 @@ public class FSMPlayer : FSMBase
 		} while (!isNewState);
 	}
 
-	public void Attack()
-	{
-		SetTrigger(CharacterState.Attack);
-	}
-
 	protected virtual IEnumerator Dead()
 	{
 		do
@@ -62,33 +55,24 @@ public class FSMPlayer : FSMBase
 		} while (!isNewState);
 	}
 
-	protected virtual IEnumerator Skill1()
-	{
-		do
-		{
-			yield return null;
-		} while (!isNewState);
-	}
-
-	protected virtual IEnumerator Skill2()
-	{
-		do
-		{
-			yield return null;
-		} while (!isNewState);
-	}
-
 	public void OnAutoAtack()
 	{
 		if (lockAttack) return;
 
+		PlayerMovement.instance.moveSpeed = 1.0f;
 		Debug.Log("Auto Attack");
 		Attack();
 		lockAttack = true;
 	}
 
+	public void Attack()
+	{
+		SetTrigger(CharacterState.Attack);
+	}
+
 	public void RealeseAttack()
 	{
+		PlayerMovement.instance.moveSpeed = 2.0f;
 		lockAttack = false;
 	}
 }

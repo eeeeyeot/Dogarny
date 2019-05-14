@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Buttons : MonoBehaviour
 {
-    private float btnSpeed = 0.1f;
     public virtual void ClickButton() { }
     public void HideButton()
     {

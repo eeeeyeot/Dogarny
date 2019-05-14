@@ -37,6 +37,5 @@ public class AttackButtonManagement : MonoBehaviour
 				mainPlayer.GetComponent<FSMPlayer>().OnAutoAtack();
 			}
 		);
-		Debug.Log("Event Added");
 	}
 }
