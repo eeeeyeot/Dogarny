@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts;
 
-[RequireComponent(typeof(CharacterController))]
 public class FSMBase : MonoBehaviour {
 	//Animator 컴포넌트를 제어하는 변수
 	public Animator anim;

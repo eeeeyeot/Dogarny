@@ -6,26 +6,22 @@ using UnityEngine.EventSystems;
 
 public class PlayerSwapManager : MonoBehaviour
 {
-	Transform[] players;
-	private void Start()
+	 public void ChangeToArcher()
 	{
-		players = GameObject.Find("Players").GetComponentsInChildren<Transform>();
+		GameObject.Find("Archer").tag = "MainPlayer";
+		GameObject.Find("Warrior").tag = "SubPlayer";
+		GameObject.Find("Wizard").tag = "SubPlayer";
 	}
-
-	public void OnChangeMainPlayer()
+	public void ChangeToWarrior()
 	{
-		string ButtonName = EventSystem.current.currentSelectedGameObject.name;
-		
-		foreach(var p in players)
-		{
-			if(p.gameObject.name == ButtonName)
-			{
-				p.gameObject.tag = "MainPlayer";
-			}
-			else
-			{
-				p.gameObject.tag = "SubPlayer";
-			}
-		}
+		GameObject.Find("Warrior").tag = "MainPlayer";
+		GameObject.Find("Archer").tag = "SubPlayer";
+		GameObject.Find("Wizard").tag = "SubPlayer";
+	}
+	public void ChangeToWizard()
+	{
+		GameObject.Find("Wizard").tag = "MainPlayer";
+		GameObject.Find("Warrior").tag = "SubPlayer";
+		GameObject.Find("Archer").tag = "SubPlayer";
 	}
 }

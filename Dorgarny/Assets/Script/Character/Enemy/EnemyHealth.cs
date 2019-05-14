@@ -2,15 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour {
+public class EnemyHealth : MonoBehaviour
+{
+	public float startHealth = 100f;
 
-	// Use this for initialization
-	void Start () {
-		
+	float currentHealth;
+	bool isDead;
+
+	// Start is called before the first frame update
+	void Start()
+	{
+		currentHealth = startHealth;
 	}
-	
+
+	void OnEnable()
+	{
+		currentHealth = startHealth;
+	}
+
 	// Update is called once per frame
-	void Update () {
-		
+	void Update()
+	{
+
+	}
+
+	public void TakeDamage(int amount)
+	{
+
+	}
+
+	void Death()
+	{
+		isDead = true;
 	}
 }

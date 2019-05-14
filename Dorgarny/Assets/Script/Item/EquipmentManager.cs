@@ -52,10 +52,9 @@ public class EquipmentManager : MonoBehaviour
 	}
 
 
-
 	//수정해야함 상시가 아닌 인벤토리에서 장착시로
 	//캐릭터 스킬을 위한 기능
-	private void Update()	
+	private void Update()
 	{
 		for(int i = 0; i < Constants.PlayerNum; i++)
 		{
@@ -67,7 +66,8 @@ public class EquipmentManager : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.K))
 		{
-			playersEquipment[mainPlayerIndex].currentEquipment[Constants.EquipmentWeaponIndex] = (Equipment)Resources.Load("WeaponSheild");
+			playersEquipment[mainPlayerIndex].currentEquipment[Constants.EquipmentWeaponIndex] = 
+				(Equipment)Resources.Load("ScriptableObject/Items/Wizard/WeaponStaff");
 		}
 
 		if (playersEquipment[mainPlayerIndex].currentEquipment[Constants.EquipmentWeaponIndex] != null)
