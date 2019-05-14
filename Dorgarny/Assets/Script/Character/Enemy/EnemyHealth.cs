@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-	public float startHealth = 100f;
+	public int startHealth = 100;
 
-	float currentHealth;
+	int currentHealth;
 	bool isDead;
 
 	// Start is called before the first frame update
@@ -23,7 +23,10 @@ public class EnemyHealth : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-
+		if(currentHealth < 0)
+		{
+			gameObject.SetActive(false);
+		}
 	}
 
 	public void TakeDamage(int amount)

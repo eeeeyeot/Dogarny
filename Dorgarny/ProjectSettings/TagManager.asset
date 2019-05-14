@@ -7,6 +7,7 @@ TagManager:
   - MainPlayer
   - SubPlayer
   - MapModel
+  - Monster
   layers:
   - Default
   - TransparentFX
