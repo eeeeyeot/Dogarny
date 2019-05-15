@@ -7,7 +7,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Rigidbody))]
 public class FSMPlayer : FSMBase
 {
-	
+	public GameObject hitCollider;
 
 	private void LateUpdate()
 	{
@@ -56,6 +56,7 @@ public class FSMPlayer : FSMBase
 		
 		Attack();
 		lockAttack = true;
+		hitCollider.SetActive(true);
 	}
 
 	public void Attack()
@@ -67,5 +68,6 @@ public class FSMPlayer : FSMBase
 	{
 		PlayerMovement.instance.moveSpeed = 2.0f;
 		lockAttack = false;
+		hitCollider.SetActive(false);
 	}
 }

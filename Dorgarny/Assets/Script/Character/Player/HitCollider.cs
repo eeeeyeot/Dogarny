@@ -12,15 +12,18 @@ public class HitCollider : MonoBehaviour
 	{
 		particleSystems = new ParticleSystem[particleGameObject.transform.childCount];
 		particleSystems = particleGameObject.GetComponentsInChildren<ParticleSystem>();
+
+		Debug.Log(particleSystems.Length);
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("HitSomething : " + other.name);
 		if (other.gameObject.tag == "Monster")
 		{
-			
-			enemy = other.GetComponent<EnemyHealth>();
+			if ((enemy = other.GetComponent<EnemyHealth>()) == null)
+			{
+				return;
+			}
 
 			enemy.TakeDamage(20);
 
@@ -28,6 +31,7 @@ public class HitCollider : MonoBehaviour
 
 			for (int i = 0; i < particleSystems.Length; i++)
 			{
+				Debug.Log(particleSystems[i].name);
 				particleSystems[i].gameObject.SetActive(true);
 				particleSystems[i].Play();
 			}

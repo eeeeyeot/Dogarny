@@ -15,6 +15,8 @@ public class EnemyAI : MonoBehaviour
 
 	bool lockAttack;
 
+	
+
 	void Start()
 	{
 		lockAttack = false;

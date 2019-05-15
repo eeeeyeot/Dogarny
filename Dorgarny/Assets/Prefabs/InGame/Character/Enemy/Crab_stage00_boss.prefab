@@ -628,6 +628,8 @@ GameObject:
   - component: {fileID: 4788423086917288148}
   - component: {fileID: 337254653135057455}
   - component: {fileID: 3167078446216050203}
+  - component: {fileID: 5834468401104247493}
+  - component: {fileID: 5728786071786175670}
   m_Layer: 0
   m_Name: Crab_stage00_boss
   m_TagString: Monster
@@ -722,6 +724,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewRange: 5
   attackRange: 3
+--- !u!114 &5834468401104247493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4089396642812511150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaeabc20f1be46640bcc738ad40e3427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 150
+--- !u!135 &5728786071786175670
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4089396642812511150}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.44720134
+  m_Center: {x: 0.0046144426, y: 0.4304812, z: -0.00048499554}
 --- !u!1 &4197941513780037765
 GameObject:
   m_ObjectHideFlags: 0

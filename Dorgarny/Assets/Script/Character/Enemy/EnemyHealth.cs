@@ -23,7 +23,7 @@ public class EnemyHealth : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if(currentHealth < 0)
+		if(currentHealth <= 0)
 		{
 			gameObject.SetActive(false);
 		}
@@ -31,7 +31,7 @@ public class EnemyHealth : MonoBehaviour
 
 	public void TakeDamage(int amount)
 	{
-
+		currentHealth -= amount;
 	}
 
 	void Death()
