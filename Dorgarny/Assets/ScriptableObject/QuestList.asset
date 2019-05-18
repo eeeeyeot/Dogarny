@@ -16,11 +16,11 @@ MonoBehaviour:
   - stagename: map00
     quest:
     - quest: "\uC544\uBB34 \uCE90\uB9AD\uB3C4 \uC8FD\uC9C0\uC54A\uACE0 \uD074\uB9AC\uC5B4"
-      complete: 0
+      complete: 1
     - quest: "\uD3EC\uC158\uC744 \uC0AC\uC6A9\uD558\uC9C0 \uC54A\uACE0 \uD074\uB9AC\uC5B4"
-      complete: 0
+      complete: 1
     - quest: "2:30 \uC548\uC5D0 \uD074\uB9AC\uC5B4"
-      complete: 0
+      complete: 1
   - stagename: map01
     quest:
     - quest: "\uC544\uBB34 \uCE90\uB9AD\uB3C4 \uC8FD\uC9C0\uC54A\uACE0 \uD074\uB9AC\uC5B4"
