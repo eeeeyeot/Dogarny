@@ -26,7 +26,8 @@ public class ETFXProjectileScript : MonoBehaviour
     {
         if (!hasCollided)
         {
-            hasCollided = true;
+			
+			hasCollided = true;
             //transform.DetachChildren();
             impactParticle = Instantiate(impactParticle, transform.position, Quaternion.FromToRotation(Vector3.up, impactNormal)) as GameObject;
             //Debug.DrawRay(hit.contacts[0].point, hit.contacts[0].normal * 1, Color.yellow);
@@ -35,10 +36,14 @@ public class ETFXProjectileScript : MonoBehaviour
             {
                 Destroy(hit.gameObject);
             }
- 
- 
-            //yield WaitForSeconds (0.05);
-            foreach (GameObject trail in trailParticles)
+
+
+			if (hit.gameObject.tag == "Enemy")
+				hit.gameObject.GetComponent<EnemyStats>().TakeDamage(GameObject.Find("Wizard").GetComponent<PlayerStats>().GetDamage());
+
+
+			//yield WaitForSeconds (0.05);
+			foreach (GameObject trail in trailParticles)
             {
                 GameObject curTrail = transform.Find(projectileParticle.name + "/" + trail.name).gameObject;
                 curTrail.transform.parent = null;
@@ -60,6 +65,8 @@ public class ETFXProjectileScript : MonoBehaviour
                 trail.transform.SetParent(null);
                 Destroy(trail.gameObject, 2);
             }
+
+            
         }
     }
 }

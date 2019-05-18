@@ -17,4 +17,4 @@ MonoBehaviour:
   CoolingTime: 7
   currentCoolTime: 0
   damageModifier: 0
-  skillEffect: {fileID: 0}
+  skillEffect: {fileID: 109592, guid: cc472c4f1a670294581daf37951e7f92, type: 3}

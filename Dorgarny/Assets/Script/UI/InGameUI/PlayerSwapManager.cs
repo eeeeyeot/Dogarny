@@ -3,25 +3,60 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.AI;
 
 public class PlayerSwapManager : MonoBehaviour
 {
-	 public void ChangeToArcher()
+	NavMeshAgent mainPlayer;
+	public void ChangeToArcher()
 	{
-		GameObject.Find("Archer").tag = "MainPlayer";
-		GameObject.Find("Warrior").tag = "SubPlayer";
-		GameObject.Find("Wizard").tag = "SubPlayer";
+		mainPlayer = GameObject.Find("Archer").GetComponent<NavMeshAgent>();
+		mainPlayer.gameObject.tag = "MainPlayer";
+
+		mainPlayer.avoidancePriority = 10;
+		//sub = 20
+		GameObject w;
+		if ((w = GameObject.Find("Warrior")) != null){
+			w.tag = "SubPlayer";
+		}
+		if ((w = GameObject.Find("Wizard")) != null)
+		{
+			w.tag = "SubPlayer";
+		}
 	}
 	public void ChangeToWarrior()
 	{
-		GameObject.Find("Warrior").tag = "MainPlayer";
-		GameObject.Find("Archer").tag = "SubPlayer";
-		GameObject.Find("Wizard").tag = "SubPlayer";
+		mainPlayer = GameObject.Find("Warrior").GetComponent<NavMeshAgent>();
+		mainPlayer.gameObject.tag = "MainPlayer";
+		
+		mainPlayer.avoidancePriority = 10;
+
+
+		GameObject w;
+		if ((w = GameObject.Find("Archer")) != null)
+		{
+			w.tag = "SubPlayer";
+		}
+		if ((w = GameObject.Find("Wizard")) != null)
+		{
+			w.tag = "SubPlayer";
+		}
 	}
 	public void ChangeToWizard()
 	{
-		GameObject.Find("Wizard").tag = "MainPlayer";
-		GameObject.Find("Warrior").tag = "SubPlayer";
-		GameObject.Find("Archer").tag = "SubPlayer";
+		mainPlayer = GameObject.Find("Wizard").GetComponent<NavMeshAgent>();
+		mainPlayer.gameObject.tag = "MainPlayer";
+
+		mainPlayer.avoidancePriority = 10;
+
+		GameObject w;
+		if ((w = GameObject.Find("Archer")) != null)
+		{
+			w.tag = "SubPlayer";
+		}
+		if ((w = GameObject.Find("Warrior")) != null)
+		{
+			w.tag = "SubPlayer";
+		}
 	}
 }

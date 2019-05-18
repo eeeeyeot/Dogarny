@@ -66,8 +66,21 @@ public class EquipmentManager : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.K))
 		{
+			PlayerSkillManager.instance.ClearSkills();
 			playersEquipment[mainPlayerIndex].currentEquipment[Constants.EquipmentWeaponIndex] = 
 				(Equipment)Resources.Load("ScriptableObject/Items/Wizard/WeaponStaff");
+		}
+		if(Input.GetKeyDown(KeyCode.U))
+		{
+			PlayerSkillManager.instance.ClearSkills();
+			playersEquipment[mainPlayerIndex].currentEquipment[Constants.EquipmentWeaponIndex] =
+					(Equipment)Resources.Load("ScriptableObject/Items/Archer/WeaponBow");
+		}
+		if(Input.GetKeyDown(KeyCode.O))
+		{
+			PlayerSkillManager.instance.ClearSkills();
+			playersEquipment[mainPlayerIndex].currentEquipment[Constants.EquipmentWeaponIndex] =
+						(Equipment)Resources.Load("ScriptableObject/Items/Warrior/WeaponSheild");
 		}
 
 		if (playersEquipment[mainPlayerIndex].currentEquipment[Constants.EquipmentWeaponIndex] != null)

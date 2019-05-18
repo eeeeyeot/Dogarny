@@ -25,14 +25,16 @@ public class EnemyPooler : MonoBehaviour
 	}
 
 
-	//시작: 적 타입별로 1개씩 instantiate
-	void InitEnemy()
+    #region Initalizations
+    void InitEnemy()
 	{
 		foreach (Enemy enemy in enemies)
 		{
 			List<GameObject> objectPool = new List<GameObject>();
 
 			GameObject obj = Instantiate(enemy.prefab) as GameObject;
+            obj.transform.parent = this.transform;
+
 			obj.SetActive(false);
 			objectPool.Add(obj);
 
@@ -40,8 +42,10 @@ public class EnemyPooler : MonoBehaviour
 		}
 
 	}
+    #endregion
 
-	public void GetPooledObject(List<SpawnPoint> spawnPoints)
+    #region Pooling
+    public void GetPooledObject(List<SpawnPoint> spawnPoints)
 	{
 		string type;
 		Transform point;
@@ -75,7 +79,9 @@ public class EnemyPooler : MonoBehaviour
 					if (enemy.tag == type)
 					{
 						GameObject obj = Instantiate(enemy.prefab, point.position, point.rotation) as GameObject;
-						obj.SetActive(true);
+                        obj.transform.parent = this.transform;
+                        
+                        obj.SetActive(true);
 						enemiesDictionary[type].Add(obj);
 						break;
 					}
@@ -83,4 +89,5 @@ public class EnemyPooler : MonoBehaviour
 			}
 		}
 	}
+    #endregion
 }

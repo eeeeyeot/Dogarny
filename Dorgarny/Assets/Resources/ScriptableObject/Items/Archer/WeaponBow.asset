@@ -18,5 +18,5 @@ MonoBehaviour:
   equipSlot: 0
   damageModifier: 5
   skill:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 167aa5854d72d7d4a8d24b8717fd68be, type: 2}
+  - {fileID: 11400000, guid: 7ab5ffec8f60e0d4c970487f1b5810ff, type: 2}
