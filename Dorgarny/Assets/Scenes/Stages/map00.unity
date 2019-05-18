@@ -512,7 +512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0109e95634a888440b2646a49cf0e7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playersEquipment: []
+  inventory: {fileID: 0}
 --- !u!1 &474645250 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1770713233806940, guid: 37281f046d5e1b647b207340e293d160,
@@ -2009,6 +2009,36 @@ PrefabInstance:
     - target: {fileID: 64973466269813744, guid: 1f7aa98b24bc3de42a1d36a06525e281,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876688572076397198, guid: 1f7aa98b24bc3de42a1d36a06525e281,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876688572076397198, guid: 1f7aa98b24bc3de42a1d36a06525e281,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299267938167682057, guid: 1f7aa98b24bc3de42a1d36a06525e281,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299267938167682057, guid: 1f7aa98b24bc3de42a1d36a06525e281,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622345987625948397, guid: 1f7aa98b24bc3de42a1d36a06525e281,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622345987625948397, guid: 1f7aa98b24bc3de42a1d36a06525e281,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
