@@ -21,6 +21,9 @@ MonoBehaviour:
   damageModifier: 0
   skillEffect: {fileID: 0}
 <<<<<<< HEAD:Dorgarny/Assets/ScriptableObject/Skills/ActiveStun.asset
+<<<<<<< HEAD:Dorgarny/Assets/ScriptableObject/Skills/ActiveStun.asset
+>>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Skills/Warrior/ActiveStun.asset
+=======
 >>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Skills/Warrior/ActiveStun.asset
 =======
 >>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Skills/Warrior/ActiveStun.asset

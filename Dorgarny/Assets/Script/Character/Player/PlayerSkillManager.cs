@@ -62,11 +62,34 @@ public class PlayerSkillManager : MonoBehaviour
 	{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		Debug.Log(newItem.name + " Equiped");
 		for(int i = 0; i < BtnSkill.Length; i++)
 		{
 			BtnSkill[i].image.sprite = newItem.skill[i].icon;
 		}
+=======
+		if (a)
+		{
+=======
+		if (a)
+		{
+>>>>>>> parent of 768d38e... 2019-05-19
+			for (int i = 0; i < BtnSkill.Length; i++)
+			{
+				BtnSkill[i].image.sprite = newItem.skill[i].icon;
+				SkillDelegate skillDel = new SkillDelegate(newItem.skill[i].Use);
+
+				BtnSkill[i].onClick.AddListener(
+					() =>
+					{
+						skillDel();
+					});
+			}
+		}
+		a = false;
+<<<<<<< HEAD
+>>>>>>> parent of 768d38e... 2019-05-19
 =======
 		if (a)
 		{
@@ -85,21 +108,6 @@ public class PlayerSkillManager : MonoBehaviour
 		a = false;
 >>>>>>> parent of 768d38e... 2019-05-19
 =======
-		if (a)
-		{
-			for (int i = 0; i < BtnSkill.Length; i++)
-			{
-				BtnSkill[i].image.sprite = newItem.skill[i].icon;
-				SkillDelegate skillDel = new SkillDelegate(newItem.skill[i].Use);
-
-				BtnSkill[i].onClick.AddListener(
-					() =>
-					{
-						skillDel();
-					});
-			}
-		}
-		a = false;
 >>>>>>> parent of 768d38e... 2019-05-19
 	}
 }

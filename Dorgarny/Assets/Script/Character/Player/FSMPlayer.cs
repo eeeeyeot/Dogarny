@@ -9,6 +9,7 @@ public class FSMPlayer : FSMBase
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	//public int currentHP = 100;
 	//public int maxHP = 100;
@@ -23,6 +24,10 @@ public class FSMPlayer : FSMBase
 	public GameObject hitCollider;
 
 >>>>>>> parent of 768d38e... 2019-05-19
+=======
+	public GameObject hitCollider;
+
+>>>>>>> parent of 768d38e... 2019-05-19
 	private void LateUpdate()
 	{
 		if (GetComponent<NavMeshAgent>().velocity != Vector3.zero)
@@ -33,6 +38,7 @@ public class FSMPlayer : FSMBase
 		{
 			CHState = CharacterState.Idle;
 		}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 	}
@@ -57,6 +63,10 @@ public class FSMPlayer : FSMBase
 	}
 
 >>>>>>> parent of 768d38e... 2019-05-19
+=======
+	}
+
+>>>>>>> parent of 768d38e... 2019-05-19
 	protected override IEnumerator Idle()
 	{
 		do
@@ -65,6 +75,7 @@ public class FSMPlayer : FSMBase
 			yield return null;
 		} while (!isNewState);
 	}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -102,6 +113,8 @@ public class FSMPlayer : FSMBase
 		do
 		{
 =======
+=======
+>>>>>>> parent of 768d38e... 2019-05-19
 
 	protected virtual IEnumerator Moving()
 	{
@@ -117,6 +130,7 @@ public class FSMPlayer : FSMBase
 		do
 		{
 
+<<<<<<< HEAD
 >>>>>>> parent of 768d38e... 2019-05-19
 			yield return null;
 		} while (!isNewState);
@@ -127,6 +141,8 @@ public class FSMPlayer : FSMBase
 	{
 		do
 		{
+=======
+>>>>>>> parent of 768d38e... 2019-05-19
 			yield return null;
 		} while (!isNewState);
 	}
@@ -135,6 +151,7 @@ public class FSMPlayer : FSMBase
 	{
 		if (lockAttack) return;
 
+<<<<<<< HEAD
 		Debug.Log("Auto Attack");
 		Attack();
 		lockAttack = true;
@@ -145,6 +162,8 @@ public class FSMPlayer : FSMBase
 	{
 		if (lockAttack) return;
 
+=======
+>>>>>>> parent of 768d38e... 2019-05-19
 		PlayerMovement.instance.moveSpeed = 1.0f;
 		
 		Attack();
@@ -156,6 +175,9 @@ public class FSMPlayer : FSMBase
 	{
 		SetTrigger(CharacterState.Attack);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 768d38e... 2019-05-19
+=======
 >>>>>>> parent of 768d38e... 2019-05-19
 =======
 >>>>>>> parent of 768d38e... 2019-05-19
@@ -165,7 +187,13 @@ public class FSMPlayer : FSMBase
 	{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		lockAttack = false;
+=======
+		PlayerMovement.instance.moveSpeed = 2.0f;
+		lockAttack = false;
+		hitCollider.SetActive(false);
+>>>>>>> parent of 768d38e... 2019-05-19
 =======
 		PlayerMovement.instance.moveSpeed = 2.0f;
 		lockAttack = false;

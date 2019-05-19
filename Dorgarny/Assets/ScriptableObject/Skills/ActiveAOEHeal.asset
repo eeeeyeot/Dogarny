@@ -21,6 +21,9 @@ MonoBehaviour:
   damageModifier: 0
   skillEffect: {fileID: 166946, guid: 867b9a6f9b54bbe43848d010fbce82f2, type: 3}
 <<<<<<< HEAD:Dorgarny/Assets/ScriptableObject/Skills/ActiveAOEHeal.asset
+<<<<<<< HEAD:Dorgarny/Assets/ScriptableObject/Skills/ActiveAOEHeal.asset
+>>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Skills/Wizard/ActiveAOEHeal.asset
+=======
 >>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Skills/Wizard/ActiveAOEHeal.asset
 =======
 >>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Skills/Wizard/ActiveAOEHeal.asset

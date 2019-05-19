@@ -21,6 +21,9 @@ MonoBehaviour:
   damageModifier: 0
   skillEffect: {fileID: 178966, guid: 898a8d3b94560fa46a71da153e710fd0, type: 3}
 <<<<<<< HEAD:Dorgarny/Assets/ScriptableObject/Skills/ActiveHeal.asset
+<<<<<<< HEAD:Dorgarny/Assets/ScriptableObject/Skills/ActiveHeal.asset
+>>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Skills/Wizard/ActiveHeal.asset
+=======
 >>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Skills/Wizard/ActiveHeal.asset
 =======
 >>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Skills/Wizard/ActiveHeal.asset

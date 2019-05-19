@@ -1134,7 +1134,10 @@ MonoBehaviour:
   originalMt: {fileID: 2100000, guid: 0ab343a0e7e302249872f0d627dc1260, type: 2}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 768d38e... 2019-05-19
 =======
 >>>>>>> parent of 768d38e... 2019-05-19
 --- !u!1001 &1055960384
@@ -1904,7 +1907,11 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 7
+=======
+  m_RootOrder: 6
+>>>>>>> parent of 768d38e... 2019-05-19
 =======
   m_RootOrder: 6
 >>>>>>> parent of 768d38e... 2019-05-19
@@ -2214,6 +2221,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!95 &1570581194 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8359502642569347870, guid: 94bb007feaaf09e4e9e10eb986c3ae7b,
@@ -2295,6 +2303,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersEquipment: []
+=======
+>>>>>>> parent of 768d38e... 2019-05-19
 =======
 >>>>>>> parent of 768d38e... 2019-05-19
 =======
@@ -2584,7 +2594,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 6
+=======
+      value: 5
+>>>>>>> parent of 768d38e... 2019-05-19
 =======
       value: 5
 >>>>>>> parent of 768d38e... 2019-05-19

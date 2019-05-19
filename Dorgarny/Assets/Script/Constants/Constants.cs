@@ -13,6 +13,9 @@ namespace Assets.Scripts
 =======
 		public static readonly int EquipmentWeaponIndex = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 768d38e... 2019-05-19
+=======
 >>>>>>> parent of 768d38e... 2019-05-19
 =======
 >>>>>>> parent of 768d38e... 2019-05-19
@@ -36,6 +39,7 @@ namespace Assets.Scripts
 	}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public enum StageState {
         None,
@@ -43,6 +47,8 @@ namespace Assets.Scripts
         Lose
     }
 
+=======
+>>>>>>> parent of 768d38e... 2019-05-19
 =======
 >>>>>>> parent of 768d38e... 2019-05-19
 =======
