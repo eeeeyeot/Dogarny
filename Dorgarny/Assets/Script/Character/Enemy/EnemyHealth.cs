@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 public class EnemyHealth : MonoBehaviour {
 
 	// Use this for initialization
@@ -14,6 +15,8 @@ public class EnemyHealth : MonoBehaviour {
 	void Update () {
 		
 =======
+=======
+>>>>>>> parent of 768d38e... 2019-05-19
 public class EnemyHealth : MonoBehaviour
 {
 	public int startHealth = 100;
@@ -49,6 +52,9 @@ public class EnemyHealth : MonoBehaviour
 	void Death()
 	{
 		isDead = true;
+<<<<<<< HEAD
+>>>>>>> parent of 768d38e... 2019-05-19
+=======
 >>>>>>> parent of 768d38e... 2019-05-19
 	}
 }

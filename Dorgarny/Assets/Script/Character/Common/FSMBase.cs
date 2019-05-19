@@ -8,7 +8,11 @@ public class FSMBase : MonoBehaviour {
 	//Animator 컴포넌트를 제어하는 변수
 	public Animator anim;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+	bool isHit = false;
+>>>>>>> parent of 768d38e... 2019-05-19
 =======
 	bool isHit = false;
 >>>>>>> parent of 768d38e... 2019-05-19

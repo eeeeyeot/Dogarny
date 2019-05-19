@@ -8,6 +8,7 @@ using UnityEngine.AI;
 public class FSMPlayer : FSMBase
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	//public int currentHP = 100;
 	//public int maxHP = 100;
@@ -18,6 +19,10 @@ public class FSMPlayer : FSMBase
 	//public float attackRange = 1.5f;
 
 
+=======
+	public GameObject hitCollider;
+
+>>>>>>> parent of 768d38e... 2019-05-19
 	private void LateUpdate()
 	{
 		if (GetComponent<NavMeshAgent>().velocity != Vector3.zero)
@@ -28,6 +33,7 @@ public class FSMPlayer : FSMBase
 		{
 			CHState = CharacterState.Idle;
 		}
+<<<<<<< HEAD
 
 	}
 
@@ -47,6 +53,10 @@ public class FSMPlayer : FSMBase
 	}
 
 >>>>>>> parent of 768d38e... 2019-05-19
+=======
+	}
+
+>>>>>>> parent of 768d38e... 2019-05-19
 	protected override IEnumerator Idle()
 	{
 		do
@@ -56,6 +66,9 @@ public class FSMPlayer : FSMBase
 		} while (!isNewState);
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 768d38e... 2019-05-19
 
 	protected virtual IEnumerator Moving()
 	{
@@ -66,11 +79,14 @@ public class FSMPlayer : FSMBase
 		} while (!isNewState);
 	}
 
+<<<<<<< HEAD
 	public void Attack()
 	{
 		SetTrigger(CharacterState.Attack);
 	}
 
+=======
+>>>>>>> parent of 768d38e... 2019-05-19
 	protected virtual IEnumerator Dead()
 	{
 		do
@@ -80,6 +96,7 @@ public class FSMPlayer : FSMBase
 		} while (!isNewState);
 	}
 
+<<<<<<< HEAD
 	protected virtual IEnumerator Skill1()
 	{
 		do
@@ -122,6 +139,8 @@ public class FSMPlayer : FSMBase
 		Attack();
 		lockAttack = true;
 =======
+=======
+>>>>>>> parent of 768d38e... 2019-05-19
 	public void OnAutoAtack()
 	{
 		if (lockAttack) return;
@@ -136,13 +155,22 @@ public class FSMPlayer : FSMBase
 	public void Attack()
 	{
 		SetTrigger(CharacterState.Attack);
+<<<<<<< HEAD
+>>>>>>> parent of 768d38e... 2019-05-19
+=======
 >>>>>>> parent of 768d38e... 2019-05-19
 	}
 
 	public void RealeseAttack()
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		lockAttack = false;
+=======
+		PlayerMovement.instance.moveSpeed = 2.0f;
+		lockAttack = false;
+		hitCollider.SetActive(false);
+>>>>>>> parent of 768d38e... 2019-05-19
 =======
 		PlayerMovement.instance.moveSpeed = 2.0f;
 		lockAttack = false;

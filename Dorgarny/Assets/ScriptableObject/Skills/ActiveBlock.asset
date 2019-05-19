@@ -20,4 +20,7 @@ MonoBehaviour:
   currentCoolTime: 0
   damageModifier: 0
   skillEffect: {fileID: 0}
+<<<<<<< HEAD:Dorgarny/Assets/ScriptableObject/Skills/ActiveBlock.asset
+>>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Skills/Warrior/ActiveBlock.asset
+=======
 >>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Skills/Warrior/ActiveBlock.asset

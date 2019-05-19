@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class PlayerSwapManager : MonoBehaviour
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	Transform[] players;
 	private void Start()
 	{
@@ -31,6 +32,10 @@ public class PlayerSwapManager : MonoBehaviour
 =======
 	 public void ChangeToArcher()
 	{
+=======
+	 public void ChangeToArcher()
+	{
+>>>>>>> parent of 768d38e... 2019-05-19
 		GameObject.Find("Archer").tag = "MainPlayer";
 		GameObject.Find("Warrior").tag = "SubPlayer";
 		GameObject.Find("Wizard").tag = "SubPlayer";
@@ -46,6 +51,9 @@ public class PlayerSwapManager : MonoBehaviour
 		GameObject.Find("Wizard").tag = "MainPlayer";
 		GameObject.Find("Warrior").tag = "SubPlayer";
 		GameObject.Find("Archer").tag = "SubPlayer";
+<<<<<<< HEAD
+>>>>>>> parent of 768d38e... 2019-05-19
+=======
 >>>>>>> parent of 768d38e... 2019-05-19
 	}
 }

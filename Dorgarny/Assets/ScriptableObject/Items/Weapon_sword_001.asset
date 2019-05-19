@@ -21,5 +21,10 @@ MonoBehaviour:
   damageModifier: 5
   armorModifier: 0
   skill:
+<<<<<<< HEAD:Dorgarny/Assets/ScriptableObject/Items/Weapon_sword_001.asset
   - {fileID: 11400000, guid: 1cf854aba5dc5a24d88f06c47cb37371, type: 2}
   - {fileID: 11400000, guid: 8d309627ddb598c4d98168f7f853b0ed, type: 2}
+=======
+  - {fileID: 0}
+  - {fileID: 0}
+>>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Items/Archer/WeaponBow.asset
