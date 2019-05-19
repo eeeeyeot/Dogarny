@@ -56,12 +56,32 @@ public class PlayerSkillManager : MonoBehaviour
 		}
 	}
 
+	bool a = true;
+
 	void SetSkills(EquipmentWeapon newItem)
 	{
+<<<<<<< HEAD
 		Debug.Log(newItem.name + " Equiped");
 		for(int i = 0; i < BtnSkill.Length; i++)
 		{
 			BtnSkill[i].image.sprite = newItem.skill[i].icon;
 		}
+=======
+		if (a)
+		{
+			for (int i = 0; i < BtnSkill.Length; i++)
+			{
+				BtnSkill[i].image.sprite = newItem.skill[i].icon;
+				SkillDelegate skillDel = new SkillDelegate(newItem.skill[i].Use);
+
+				BtnSkill[i].onClick.AddListener(
+					() =>
+					{
+						skillDel();
+					});
+			}
+		}
+		a = false;
+>>>>>>> parent of 768d38e... 2019-05-19
 	}
 }

@@ -7,8 +7,12 @@ namespace Assets.Scripts
 {
 	public static class Constants{
 		public static readonly int PlayerNum = 3;
+<<<<<<< HEAD
         public static readonly int EquipmentItemSlotIndex = 2;
         public static readonly int EquipmentWeaponIndex = 0;
+=======
+		public static readonly int EquipmentWeaponIndex = 0;
+>>>>>>> parent of 768d38e... 2019-05-19
 	}
 
 	public enum CharacterState
@@ -27,6 +31,7 @@ namespace Assets.Scripts
 		Player1,
 		Player2
 	}
+<<<<<<< HEAD
 
     public enum StageState {
         None,
@@ -34,4 +39,6 @@ namespace Assets.Scripts
         Lose
     }
 
+=======
+>>>>>>> parent of 768d38e... 2019-05-19
 }

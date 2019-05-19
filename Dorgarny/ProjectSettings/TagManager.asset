@@ -7,6 +7,10 @@ TagManager:
   - MainPlayer
   - SubPlayer
   - MapModel
+<<<<<<< HEAD
+=======
+  - Monster
+>>>>>>> parent of 768d38e... 2019-05-19
   layers:
   - Default
   - TransparentFX

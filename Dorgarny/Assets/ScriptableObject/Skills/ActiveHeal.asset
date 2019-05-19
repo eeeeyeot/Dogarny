@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Active Heal
   icon: {fileID: 21300000, guid: bf773f36403593e4d96344432d879b1d, type: 3}
+<<<<<<< HEAD:Dorgarny/Assets/ScriptableObject/Skills/ActiveHeal.asset
+=======
+  CoolingTime: 5
+  currentCoolTime: 0
+  damageModifier: 0
+  skillEffect: {fileID: 178966, guid: 898a8d3b94560fa46a71da153e710fd0, type: 3}
+>>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Skills/Wizard/ActiveHeal.asset

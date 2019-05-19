@@ -62,6 +62,7 @@ public class EquipmentManager : MonoBehaviour
 
 	//수정해야함 상시가 아닌 인벤토리에서 장착시로
 	//캐릭터 스킬을 위한 기능
+<<<<<<< HEAD
 	public void Equip(Equipment newItem, int playerIndex = 0)
     {
         int slotIndex = (int)newItem.equipSlot;
@@ -105,6 +106,34 @@ public class EquipmentManager : MonoBehaviour
         //    PlayerSkillManager.instance.ClearSkills();
         //}
     }
+=======
+	private void Update()
+	{
+		for(int i = 0; i < Constants.PlayerNum; i++)
+		{
+			if (players[i].tag == "MainPlayer")
+			{
+				mainPlayerIndex = i;
+			}
+		}
+
+		if (Input.GetKeyDown(KeyCode.K))
+		{
+			playersEquipment[mainPlayerIndex].currentEquipment[Constants.EquipmentWeaponIndex] = 
+				(Equipment)Resources.Load("ScriptableObject/Items/Wizard/WeaponStaff");
+		}
+
+		if (playersEquipment[mainPlayerIndex].currentEquipment[Constants.EquipmentWeaponIndex] != null)
+		{
+			Equipment equipment = playersEquipment[mainPlayerIndex].currentEquipment[Constants.EquipmentWeaponIndex];
+			PlayerSkillManager.instance.Equip(equipment);
+		}
+		else
+		{
+			PlayerSkillManager.instance.ClearSkills();
+		}
+	}
+>>>>>>> parent of 768d38e... 2019-05-19
 	
     public void Unequip (int playerIndex, int slotIndex)
     {

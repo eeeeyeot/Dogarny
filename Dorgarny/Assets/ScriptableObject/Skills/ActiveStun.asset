@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: New Skill
   icon: {fileID: 21300000, guid: d2ab55a2ef196b0498f23c4068cbed84, type: 3}
+<<<<<<< HEAD:Dorgarny/Assets/ScriptableObject/Skills/ActiveStun.asset
+=======
+  CoolingTime: 7
+  currentCoolTime: 0
+  damageModifier: 0
+  skillEffect: {fileID: 0}
+>>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Skills/Warrior/ActiveStun.asset

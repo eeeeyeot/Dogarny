@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Active Block
   icon: {fileID: 21300000, guid: 5d0f9db298a898a488aa8783441aa9ea, type: 3}
+<<<<<<< HEAD:Dorgarny/Assets/ScriptableObject/Skills/ActiveBlock.asset
+=======
+  CoolingTime: 10
+  currentCoolTime: 0
+  damageModifier: 0
+  skillEffect: {fileID: 0}
+>>>>>>> parent of 768d38e... 2019-05-19:Dorgarny/Assets/Resources/ScriptableObject/Skills/Warrior/ActiveBlock.asset

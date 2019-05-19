@@ -7,7 +7,11 @@ using Assets.Scripts;
 public class FSMBase : MonoBehaviour {
 	//Animator 컴포넌트를 제어하는 변수
 	public Animator anim;
+<<<<<<< HEAD
 
+=======
+	bool isHit = false;
+>>>>>>> parent of 768d38e... 2019-05-19
 	protected bool lockAttack = false;
 
 
