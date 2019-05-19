@@ -21,12 +21,6 @@ public class AttackButtonManagement : MonoBehaviour
 
 	private void Update()
 	{
-		if(mainPlayer == null)
-		{
-			mainPlayer = GameObject.FindWithTag("MainPlayer");
-		}	
-
-
 		if (mainPlayer.tag != GameObject.FindWithTag("MainPlayer").tag)
 		{
 			mainPlayer = GameObject.FindWithTag("MainPlayer");
@@ -43,5 +37,6 @@ public class AttackButtonManagement : MonoBehaviour
 				mainPlayer.GetComponent<FSMPlayer>().OnAutoAtack();
 			}
 		);
+		Debug.Log("Event Added");
 	}
 }

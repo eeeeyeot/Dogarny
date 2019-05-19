@@ -4,20 +4,9 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour {
-
-	#region Singleton
-
-	public static PlayerMovement instance;
-
-	void Awake()
-	{
-		instance = this;
-	}
-
-	#endregion
-
+	
 	[SerializeField]
-	public float moveSpeed = 2f;
+	float moveSpeed = 2f;
 	public VirtualJoystick moveJoystick = null;
 
 	Vector3 forward, right;
@@ -26,6 +15,8 @@ public class PlayerMovement : MonoBehaviour {
 	NavMeshAgent agent;
 
 	Transform target;
+
+	
 
 	void Start () {
 		//get the forward of camera except for the y element

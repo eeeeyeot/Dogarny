@@ -3,76 +3,87 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Util;
 
 public class Inventory : MonoBehaviour
 {
-    public GameObject prefab;
-    public Transform rootSlot; // slotroot
-    public Shop shop;
-    private List<Slot> slots = new List<Slot>();
+    #region Singleton
+    public static Inventory instance;
 
-    private bool active = false;
-
-    void Start()
+    private void Awake()
     {
-        Init();
-    }
-
-    public void Init()
-    {
-        int slotCnt = rootSlot.childCount;
-
-
-        for (int i = 0; i < slotCnt; i++)
+        if (instance != null)
         {
-            var slot = rootSlot.GetChild(i).GetComponent<Slot>();
-            slots.Add(slot);
+            Debug.LogWarning("More than one instance of Inventory");
         }
-
-        shop.onSlotClick += GiveItem;
-    }
-
-    void GiveItem(ItemInfo item)
-    {
-        var emptySlot = slots.Find(t =>
-        {
-            return t.item == null || t.item.name == string.Empty;
-        });
-
-        var haveSlot = slots.Find(t =>
-         {
-             if (t.item == null)
-                 return false;
-
-             return t.item.name == item.name && t.itemCount < 99;
-         });
         
+        instance = this;
+        
+    }
+    #endregion
 
-        if (haveSlot != null && item.category == ItemInfo.Category.Potion)
+    public delegate void OnItemChanged();
+    public OnItemChanged onItemChangedCallback = null;
+
+    public int space = 80;                      //가방 공간
+    
+    public Dictionary<Item, int> items_count = new Dictionary<Item, int>();
+    public List<Item> items = new List<Item>();
+    int count = 0;
+    
+    public bool Add(Item item)
+    {
+        if (item == null)
+            return false;
+
+        if (!item.isDefaultItem)
         {
-            if (haveSlot.itemCount > 99)
+            if (items.Count >= space)           //가방이 꽉찼는지 확인
             {
-                if (emptySlot != null)
+                return false;
+            }
+            if (item.category == Category.Consume)
+            {
+                if (items_count.TryGetValue(item, out count))
                 {
-                    emptySlot.SetItem(item);
+                    count++;
+                    items_count[item] = count;
+                }
+                else
+                {
+                    count++;
+                    items.Add(item);
+                    items_count.Add(item, count);
                 }
             }
-            haveSlot.itemCount++;
-            haveSlot.text_Count.text = haveSlot.itemCount.ToString();
-        }
-        else
-        {
-            if (emptySlot != null)
+            else
             {
-                emptySlot.itemCount++;
-                emptySlot.SetItem(item);
+                count++;
+                items.Add(item);
             }
+
+            if (onItemChangedCallback != null)
+                onItemChangedCallback.Invoke();
         }
+
+        return true;
     }
 
-    public void Clickinventory()  // OnClick~~~로 바꾸기
+    // 아이템 강제 추가
+    private void Update()
     {
-        active = !active;
-        this.gameObject.SetActive(active);
+        if(Input.GetKeyDown(KeyCode.K))
+            Add((Equipment)Resources.Load("WeaponSheild"));
+
+        if (Input.GetKeyDown(KeyCode.L))
+            Add((Equipment)Resources.Load("Weapon_sword_002"));
+    }
+
+    public void Remove(Item item)
+    {
+        items.Remove(item);
+
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
     }
 }
