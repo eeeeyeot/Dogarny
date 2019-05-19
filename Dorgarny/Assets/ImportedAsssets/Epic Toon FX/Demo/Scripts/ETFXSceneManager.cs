@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public class ETFXSceneManager : MonoBehaviour
 {
-    public void LoadScene1()  {
+	public void LoadScene1()  {
 		SceneManager.LoadScene ("etfx_explosions");
 	}
     public void LoadScene2()  {

@@ -62,7 +62,10 @@ public class IsometricCamera : MonoBehaviour
 			r = hit.transform.GetComponent<Renderer>();
 
 			//1.1 맵 오브젝트에서 맵 오브젝트로 넘어온 경우
-			if (previous_hitObj.tag != "MainPlayer" && previous_hitObj.tag != "SubPlayer")
+			if(previous_hitObj.tag == "DeadPlayer" || hit.transform.tag == "Enemy"){
+				return;
+			}
+			else if (previous_hitObj.tag != "MainPlayer" && previous_hitObj.tag != "SubPlayer")
 			{
 				Renderer p_r = previous_hitObj.GetComponent<Renderer>();
 				p_r.material = originalMt;
@@ -80,8 +83,11 @@ public class IsometricCamera : MonoBehaviour
 			{
 				//do nothing..
 			}
+			else if(previous_hitObj.tag == "DeadPlayer"){
+				return;
+			}
 			//2.2 맵 오브젝트에서 플레이어로 넘어온 경우
-			else if (previous_hitObj.tag != "MainPlayer" && previous_hitObj.tag != "SubPlayer")
+			else if (previous_hitObj.tag != "MainPlayer" && previous_hitObj.tag != "SubPlayer" && previous_hitObj.tag != "Enemy")
 			{
 				previous_hitObj.GetComponent<Renderer>().material = originalMt;
 			}

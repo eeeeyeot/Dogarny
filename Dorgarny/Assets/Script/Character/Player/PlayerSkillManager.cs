@@ -27,7 +27,7 @@ public class PlayerSkillManager : MonoBehaviour
 	private void Start()
 	{
 		players = new GameObject[GameObject.Find("Players").transform.childCount];
-		for(int i = 0; i < Constants.PlayerNum; i++)
+		for (int i = 0; i < Constants.PlayerNum; i++)
 		{
 			players[i] = GameObject.Find("Players").transform.GetChild(i).gameObject;
 			Debug.Log(players[i].name);
@@ -56,24 +56,21 @@ public class PlayerSkillManager : MonoBehaviour
 		}
 	}
 
-	bool a = true;
-
 	void SetSkills(EquipmentWeapon newItem)
 	{
-		if (a)
+		for (int i = 0; i < BtnSkill.Length; i++)
 		{
-			for (int i = 0; i < BtnSkill.Length; i++)
-			{
-				BtnSkill[i].image.sprite = newItem.skill[i].icon;
-				SkillDelegate skillDel = new SkillDelegate(newItem.skill[i].Use);
+			BtnSkill[i].onClick.RemoveAllListeners();
+			Debug.Log("Skill Added");
+			BtnSkill[i].image.sprite = newItem.skill[i].icon;
+			SkillDelegate skillDel = new SkillDelegate(newItem.skill[i].Use);
 
-				BtnSkill[i].onClick.AddListener(
-					() =>
-					{
-						skillDel();
-					});
-			}
+			BtnSkill[i].onClick.AddListener(
+				() =>
+				{
+					skillDel();
+				});
 		}
-		a = false;
+
 	}
 }

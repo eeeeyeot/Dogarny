@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class HitCollider : MonoBehaviour
 {
-	EnemyHealth enemy;
+	public EnemyStats enemy;
+	public PlayerStats player;
 	public GameObject particleGameObject;
 	ParticleSystem[] particleSystems;
 
@@ -12,26 +13,21 @@ public class HitCollider : MonoBehaviour
 	{
 		particleSystems = new ParticleSystem[particleGameObject.transform.childCount];
 		particleSystems = particleGameObject.GetComponentsInChildren<ParticleSystem>();
-
+		
 		Debug.Log(particleSystems.Length);
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.tag == "Monster")
+		if ((enemy = other.GetComponent<EnemyStats>()) == null)
+			return;
+
+		if (other.gameObject.tag == "Enemy")
 		{
-			if ((enemy = other.GetComponent<EnemyHealth>()) == null)
-			{
-				return;
-			}
-
-			enemy.TakeDamage(20);
-
-			
-
+			enemy.TakeDamage(player.GetDamage());
+			Debug.Log("Damage to mob");
 			for (int i = 0; i < particleSystems.Length; i++)
 			{
-				Debug.Log(particleSystems[i].name);
 				particleSystems[i].gameObject.SetActive(true);
 				particleSystems[i].Play();
 			}
