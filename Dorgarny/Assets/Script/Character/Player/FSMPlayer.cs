@@ -7,88 +7,124 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Rigidbody))]
 public class FSMPlayer : FSMBase
 {
+    public GameObject hitCollider;
+	public GameObject[] skills = new GameObject[2];
+    public GameObject attackEffect;
+    public Transform effectPos;
+	
 
-	//public int currentHP = 100;
-	//public int maxHP = 100;
-	//public int exp = 0;
-	//public int level = 1;
-	//public int gold = 0;
-	//public float attack = 40.0f;
-	//public float attackRange = 1.5f;
+    private Vector3 forward;
+    private Ray ray;
 
+	private void Start()
+	{
+		
+		if (hitCollider != null)
+			hitCollider.GetComponent<HitCollider>().player = GetComponent<PlayerStats>();
+	}
 
 	private void LateUpdate()
-	{
-		if (GetComponent<NavMeshAgent>().velocity != Vector3.zero)
-		{
-			CHState = CharacterState.Moving;
-		}
-		else
-		{
-			CHState = CharacterState.Idle;
-		}
+    {
+        if (GetComponent<NavMeshAgent>().velocity != Vector3.zero)
+        {
+            CHState = CharacterState.Moving;
+        }
+        else
+        {
+            CHState = CharacterState.Idle;
+        }
+    }
 
-	}
+    protected override IEnumerator Idle()
+    {
+        do
+        {
+            SetState(CharacterState.Idle);
+            yield return null;
+        } while (!isNewState);
+    }
 
-	protected override IEnumerator Idle()
-	{
-		do
-		{
-			SetState(CharacterState.Idle);
-			yield return null;
-		} while (!isNewState);
-	}
+    protected virtual IEnumerator Moving()
+    {
+        do
+        {
+            SetState(CharacterState.Moving);
+            yield return null;
+        } while (!isNewState);
+    }
 
-	protected virtual IEnumerator Moving()
-	{
-		do
-		{
-			SetState(CharacterState.Moving);
-			yield return null;
-		} while (!isNewState);
-	}
+    protected virtual IEnumerator Dead()
+    {
+        do
+        {
 
-	public void Attack()
-	{
-		SetTrigger(CharacterState.Attack);
-	}
+            yield return null;
+        } while (!isNewState);
+    }
 
-	protected virtual IEnumerator Dead()
-	{
-		do
-		{
+    public void OnAutoAtack()
+    {
+        if (lockAttack) return;
 
-			yield return null;
-		} while (!isNewState);
-	}
+        GetComponent<NavMeshAgent>().speed = 1.0f;
+        if (gameObject.tag == "MainPlayer")
+        {
+            PlayerMovement.instance.moveSpeed = 1.0f;
+        }
 
-	protected virtual IEnumerator Skill1()
-	{
-		do
-		{
-			yield return null;
-		} while (!isNewState);
-	}
+        Attack();
+        lockAttack = true;
+        if (hitCollider != null)
+            hitCollider.SetActive(true);
+    }
 
-	protected virtual IEnumerator Skill2()
-	{
-		do
-		{
-			yield return null;
-		} while (!isNewState);
-	}
+    public void Attack()
+    {
+        SetTrigger(CharacterState.Attack);
+    }
 
-	public void OnAutoAtack()
-	{
-		if (lockAttack) return;
+    public void RealeseAttack()
+    {
+        GetComponent<NavMeshAgent>().speed = 2.0f;
+        if (gameObject.tag == "MainPlayer")
+        {
+            PlayerMovement.instance.moveSpeed = 2.0f;
+        }
+        lockAttack = false;
+        if (hitCollider != null)
+            hitCollider.SetActive(false);
+    }
 
-		Debug.Log("Auto Attack");
-		Attack();
-		lockAttack = true;
-	}
+    public void ActiveAttackEffect()
+    {
+        GameObject projectile = Instantiate(attackEffect, effectPos.position, transform.rotation) as GameObject;
+        
+        if (gameObject.name == "Wizard")
+        {
+            forward = transform.forward;
+            StartCoroutine("MoveForward", projectile);
+        }
+        else if(gameObject.name == "Archer")
+        {
+            RaycastHit hit;
+            forward = transform.position;
+            forward.y += 0.2f;
+            if(Physics.Raycast(transform.position, forward, out hit))
+            {
+                if(hit.transform.gameObject.tag == "Enemy")
+                {
+                    hit.transform.GetComponent<EnemyStats>().TakeDamage(GetComponent<PlayerStats>().GetDamage());
+                }
+            }
+        }
+    }
 
-	public void RealeseAttack()
-	{
-		lockAttack = false;
-	}
+    IEnumerator MoveForward(GameObject _effect)
+    {
+        while (_effect != null)
+        {
+            
+            yield return _effect.transform.position += forward * Constants.fireballSpeed * Time.deltaTime;
+        }
+    }
 }

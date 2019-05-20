@@ -5,10 +5,13 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
+	public delegate void SkillAnimation();
+
 	public static class Constants{
 		public static readonly int PlayerNum = 3;
-        public static readonly int EquipmentItemSlotIndex = 2;
-        public static readonly int EquipmentWeaponIndex = 0;
+		public static readonly int EquipmentWeaponIndex = 0;
+		public static readonly int EquipmentItemSlotIndex = 2;
+		public static readonly float fireballSpeed = 2.5f;
 	}
 
 	public enum CharacterState
@@ -28,10 +31,9 @@ namespace Assets.Scripts
 		Player2
 	}
 
-    public enum StageState {
-        None,
-        WIn,
-        Lose
+    public enum Characters
+    {
+        Player,
+        Enemy
     }
-
 }

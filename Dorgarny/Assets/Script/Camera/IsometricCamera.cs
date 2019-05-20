@@ -24,7 +24,6 @@ public class IsometricCamera : MonoBehaviour
 	{
 		player = GameObject.FindWithTag("MainPlayer");
 		prev_player = player;
-
 	}
 
 	private void Update()
@@ -50,9 +49,12 @@ public class IsometricCamera : MonoBehaviour
 	private void FixedUpdate()
 	{
 		Vector3 direction = (player.transform.position - transform.position);
-		direction.y = direction.y + 0.3f;
+		direction.y = direction.y + 0.2f;
 		bool isHit = Physics.Raycast(transform.position, direction, out hit);
 		Debug.DrawRay(transform.position, direction);
+
+		if (!isHit)
+			return;
 
 		//1. 플레이어가 아닌 경우
 		if (hit.transform.gameObject.tag != "MainPlayer" && hit.transform.gameObject.tag != "SubPlayer") 
@@ -60,9 +62,11 @@ public class IsometricCamera : MonoBehaviour
 			r = hit.transform.GetComponent<Renderer>();
 
 			//1.1 맵 오브젝트에서 맵 오브젝트로 넘어온 경우
-			if (previous_hitObj.tag != "MainPlayer" && previous_hitObj.tag != "SubPlayer")
+			if(previous_hitObj.tag == "DeadPlayer" || hit.transform.tag == "Enemy"){
+				return;
+			}
+			else if (previous_hitObj.tag != "MainPlayer" && previous_hitObj.tag != "SubPlayer")
 			{
-				Debug.Log("Changing Material");
 				Renderer p_r = previous_hitObj.GetComponent<Renderer>();
 				p_r.material = originalMt;
 			}
@@ -79,8 +83,11 @@ public class IsometricCamera : MonoBehaviour
 			{
 				//do nothing..
 			}
+			else if(previous_hitObj.tag == "DeadPlayer"){
+				return;
+			}
 			//2.2 맵 오브젝트에서 플레이어로 넘어온 경우
-			else if (previous_hitObj.tag != "MainPlayer" && previous_hitObj.tag != "SubPlayer")
+			else if (previous_hitObj.tag != "MainPlayer" && previous_hitObj.tag != "SubPlayer" && previous_hitObj.tag != "Enemy")
 			{
 				previous_hitObj.GetComponent<Renderer>().material = originalMt;
 			}

@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using Assets.Scripts;
 
-
 public class PlayerSkillManager : MonoBehaviour
 {
 	#region Singleton
@@ -20,20 +19,29 @@ public class PlayerSkillManager : MonoBehaviour
 
 	GameObject[] players;
 
+	delegate void SkillDelegate(SkillAnimation animation);
+
 	public Button[] BtnSkill = new Button[2];
+	public Sprite transparent_Spr;
 
 	private void Start()
 	{
 		players = new GameObject[GameObject.Find("Players").transform.childCount];
-		for(int i = 0; i < Constants.PlayerNum; i++)
+		for (int i = 0; i < Constants.PlayerNum; i++)
 		{
 			players[i] = GameObject.Find("Players").transform.GetChild(i).gameObject;
 			Debug.Log(players[i].name);
 		}
+
+		//ActiveSkill[] skills = GameObject.FindWithTag("MainPlayer").GetComponent<PlayerStats>().PlayerDefinition.activeSkill;
+		//SetSkills(skills);
+		//SetSkills(((EquipmentWeapon)Resources.Load("ScriptableObject/Items/Warrior/WeaponSheild")).skill);
 	}
 
-
-
+	private void Update()
+	{
+		SetSkills(GameObject.FindWithTag("MainPlayer").GetComponent<PlayerStats>().PlayerDefinition.activeSkill);
+	}
 
 	public void Equip(Equipment newItem)
 	{
@@ -43,7 +51,7 @@ public class PlayerSkillManager : MonoBehaviour
 				//Equip Armor
 				break;
 			case EquipmentSlot.Weapon:
-				SetSkills((EquipmentWeapon)newItem);
+				SetSkills(((EquipmentWeapon)newItem).skill);
 				break;
 		}
 	}
@@ -52,16 +60,34 @@ public class PlayerSkillManager : MonoBehaviour
 	{
 		for (int i = 0; i < BtnSkill.Length; i++)
 		{
-			BtnSkill[i].image.sprite = null;
+			BtnSkill[i].image.sprite = transparent_Spr;
+			BtnSkill[i].onClick.RemoveAllListeners();
 		}
 	}
 
-	void SetSkills(EquipmentWeapon newItem)
+	void SetSkills(ActiveSkill[] newSkill)
 	{
-		Debug.Log(newItem.name + " Equiped");
-		for(int i = 0; i < BtnSkill.Length; i++)
+		if(newSkill[0] == null)
 		{
-			BtnSkill[i].image.sprite = newItem.skill[i].icon;
+			return;
 		}
+
+		for (int i = 0; i < BtnSkill.Length; i++)
+		{
+			BtnSkill[i].onClick.RemoveAllListeners();
+			BtnSkill[i].image.sprite = newSkill[i].icon;
+			SkillDelegate skillDel = new SkillDelegate(newSkill[i].Use);
+			SkillAnimation skillAnim = new SkillAnimation(ActiveSkill);
+			BtnSkill[i].onClick.AddListener(
+				() =>
+				{
+					skillDel(skillAnim);
+				});
+		}
+	}
+
+	void ActiveSkill()
+	{
+		GameObject.FindWithTag("MainPlayer").GetComponent<FSMPlayer>().anim.SetTrigger("Skill");
 	}
 }
