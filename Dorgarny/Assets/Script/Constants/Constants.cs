@@ -7,18 +7,9 @@ namespace Assets.Scripts
 {
 	public static class Constants{
 		public static readonly int PlayerNum = 3;
-<<<<<<< HEAD
-        public static readonly int EquipmentItemSlotIndex = 2;
-        public static readonly int EquipmentWeaponIndex = 0;
-=======
 		public static readonly int EquipmentWeaponIndex = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 768d38e... 2019-05-19
-=======
->>>>>>> parent of 768d38e... 2019-05-19
-=======
->>>>>>> parent of 768d38e... 2019-05-19
+		public static readonly int EquipmentItemSlotIndex = 2;
+		public static readonly float fireballSpeed = 2.5f;
 	}
 
 	public enum CharacterState
@@ -37,20 +28,10 @@ namespace Assets.Scripts
 		Player1,
 		Player2
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    public enum StageState {
-        None,
-        WIn,
-        Lose
+    public enum Characters
+    {
+        Player,
+        Enemy
     }
-
-=======
->>>>>>> parent of 768d38e... 2019-05-19
-=======
->>>>>>> parent of 768d38e... 2019-05-19
-=======
->>>>>>> parent of 768d38e... 2019-05-19
 }

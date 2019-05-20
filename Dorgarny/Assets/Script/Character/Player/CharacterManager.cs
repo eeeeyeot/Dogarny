@@ -34,8 +34,8 @@ public class CharacterManager : MonoBehaviour
         {
             stats_List.Add(players.GetChild(i).GetComponent<CharacterStats>());
         }
-		//능력치 따로 지정해야함
-		
+        //능력치 따로 지정해야함
+
         stats_List[0].job = "기사";
         stats_List[0].maxHealth = 300;
         stats_List[0].atk.baseValue = 10;

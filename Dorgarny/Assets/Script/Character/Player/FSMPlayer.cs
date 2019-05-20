@@ -7,202 +7,123 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Rigidbody))]
 public class FSMPlayer : FSMBase
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+    public GameObject hitCollider;
+    public GameObject attackEffect;
+    public Transform effectPos;
+	
 
-	//public int currentHP = 100;
-	//public int maxHP = 100;
-	//public int exp = 0;
-	//public int level = 1;
-	//public int gold = 0;
-	//public float attack = 40.0f;
-	//public float attackRange = 1.5f;
+    private Vector3 forward;
+    private Ray ray;
 
-
-=======
-	public GameObject hitCollider;
-
->>>>>>> parent of 768d38e... 2019-05-19
-=======
-	public GameObject hitCollider;
-
->>>>>>> parent of 768d38e... 2019-05-19
-	private void LateUpdate()
+	private void Start()
 	{
-		if (GetComponent<NavMeshAgent>().velocity != Vector3.zero)
-		{
-			CHState = CharacterState.Moving;
-		}
-		else
-		{
-			CHState = CharacterState.Idle;
-		}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-	}
-
-=======
-	public GameObject hitCollider;
-
-	private void LateUpdate()
-	{
-		if (GetComponent<NavMeshAgent>().velocity != Vector3.zero)
-		{
-			CHState = CharacterState.Moving;
-		}
-		else
-		{
-			CHState = CharacterState.Idle;
-		}
-	}
-
->>>>>>> parent of 768d38e... 2019-05-19
-=======
-	}
-
->>>>>>> parent of 768d38e... 2019-05-19
-=======
-	}
-
->>>>>>> parent of 768d38e... 2019-05-19
-	protected override IEnumerator Idle()
-	{
-		do
-		{
-			SetState(CharacterState.Idle);
-			yield return null;
-		} while (!isNewState);
-	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 768d38e... 2019-05-19
-
-	protected virtual IEnumerator Moving()
-	{
-		do
-		{
-			SetState(CharacterState.Moving);
-			yield return null;
-		} while (!isNewState);
-	}
-
-<<<<<<< HEAD
-	public void Attack()
-	{
-		SetTrigger(CharacterState.Attack);
-	}
-
-=======
->>>>>>> parent of 768d38e... 2019-05-19
-	protected virtual IEnumerator Dead()
-	{
-		do
-		{
-
-			yield return null;
-		} while (!isNewState);
-	}
-
-<<<<<<< HEAD
-	protected virtual IEnumerator Skill1()
-	{
-		do
-		{
-=======
-=======
->>>>>>> parent of 768d38e... 2019-05-19
-
-	protected virtual IEnumerator Moving()
-	{
-		do
-		{
-			SetState(CharacterState.Moving);
-			yield return null;
-		} while (!isNewState);
-	}
-
-	protected virtual IEnumerator Dead()
-	{
-		do
-		{
-
-<<<<<<< HEAD
->>>>>>> parent of 768d38e... 2019-05-19
-			yield return null;
-		} while (!isNewState);
-	}
-
-<<<<<<< HEAD
-	protected virtual IEnumerator Skill2()
-	{
-		do
-		{
-=======
->>>>>>> parent of 768d38e... 2019-05-19
-			yield return null;
-		} while (!isNewState);
-	}
-
-	public void OnAutoAtack()
-	{
-		if (lockAttack) return;
-
-<<<<<<< HEAD
-		Debug.Log("Auto Attack");
-		Attack();
-		lockAttack = true;
-=======
-=======
->>>>>>> parent of 768d38e... 2019-05-19
-	public void OnAutoAtack()
-	{
-		if (lockAttack) return;
-
-=======
->>>>>>> parent of 768d38e... 2019-05-19
-		PlayerMovement.instance.moveSpeed = 1.0f;
 		
-		Attack();
-		lockAttack = true;
-		hitCollider.SetActive(true);
+		if (hitCollider != null)
+			hitCollider.GetComponent<HitCollider>().player = GetComponent<PlayerStats>();
 	}
 
-	public void Attack()
-	{
-		SetTrigger(CharacterState.Attack);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 768d38e... 2019-05-19
-=======
->>>>>>> parent of 768d38e... 2019-05-19
-=======
->>>>>>> parent of 768d38e... 2019-05-19
-	}
+	private void LateUpdate()
+    {
+        if (GetComponent<NavMeshAgent>().velocity != Vector3.zero)
+        {
+            CHState = CharacterState.Moving;
+        }
+        else
+        {
+            CHState = CharacterState.Idle;
+        }
+    }
 
-	public void RealeseAttack()
-	{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		lockAttack = false;
-=======
-		PlayerMovement.instance.moveSpeed = 2.0f;
-		lockAttack = false;
-		hitCollider.SetActive(false);
->>>>>>> parent of 768d38e... 2019-05-19
-=======
-		PlayerMovement.instance.moveSpeed = 2.0f;
-		lockAttack = false;
-		hitCollider.SetActive(false);
->>>>>>> parent of 768d38e... 2019-05-19
-=======
-		PlayerMovement.instance.moveSpeed = 2.0f;
-		lockAttack = false;
-		hitCollider.SetActive(false);
->>>>>>> parent of 768d38e... 2019-05-19
-	}
+    protected override IEnumerator Idle()
+    {
+        do
+        {
+            SetState(CharacterState.Idle);
+            yield return null;
+        } while (!isNewState);
+    }
+
+    protected virtual IEnumerator Moving()
+    {
+        do
+        {
+            SetState(CharacterState.Moving);
+            yield return null;
+        } while (!isNewState);
+    }
+
+    protected virtual IEnumerator Dead()
+    {
+        do
+        {
+
+            yield return null;
+        } while (!isNewState);
+    }
+
+    public void OnAutoAtack()
+    {
+        if (lockAttack) return;
+
+        GetComponent<NavMeshAgent>().speed = 1.0f;
+        if (gameObject.tag == "MainPlayer")
+        {
+            PlayerMovement.instance.moveSpeed = 1.0f;
+        }
+
+        Attack();
+        lockAttack = true;
+        if (hitCollider != null)
+            hitCollider.SetActive(true);
+    }
+
+    public void Attack()
+    {
+        SetTrigger(CharacterState.Attack);
+    }
+
+    public void RealeseAttack()
+    {
+        GetComponent<NavMeshAgent>().speed = 2.0f;
+        if (gameObject.tag == "MainPlayer")
+        {
+            PlayerMovement.instance.moveSpeed = 2.0f;
+        }
+        lockAttack = false;
+        if (hitCollider != null)
+            hitCollider.SetActive(false);
+    }
+
+    public void ActiveAttackEffect()
+    {
+        GameObject projectile = Instantiate(attackEffect, effectPos.position, transform.rotation) as GameObject;
+        
+        if (gameObject.name == "Wizard")
+        {
+            forward = transform.forward;
+            StartCoroutine("MoveForward", projectile);
+        }
+        else if(gameObject.name == "Archer")
+        {
+            RaycastHit hit;
+            forward = transform.position;
+            forward.y += 0.2f;
+            if(Physics.Raycast(transform.position, forward, out hit))
+            {
+                if(hit.transform.gameObject.tag == "Enemy")
+                {
+                    hit.transform.GetComponent<EnemyStats>().TakeDamage(GetComponent<PlayerStats>().GetDamage());
+                }
+            }
+        }
+    }
+
+    IEnumerator MoveForward(GameObject _effect)
+    {
+        while (_effect != null)
+        {
+            
+            yield return _effect.transform.position += forward * Constants.fireballSpeed * Time.deltaTime;
+        }
+    }
 }

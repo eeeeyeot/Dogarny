@@ -18,7 +18,23 @@ public class EndUI : MonoBehaviour
     Transform WinUI;
     Transform LoseUI;
 
-    void Start()
+	public bool IsPlayerDied { get; set; }
+
+
+	#region Singleton
+	public static EndUI instance;
+
+	private void Awake()
+	{
+		if (instance != null)
+		{
+			Debug.LogWarning("More than one instance of EndUI");
+		}
+		instance = this;
+	}
+	#endregion
+
+	void Start()
     {
         starCount = 0;
         for (int i = 0; i < stars.childCount; i++)
@@ -48,7 +64,7 @@ public class EndUI : MonoBehaviour
             if (QuestInfoSO.questList[i].stagename == SceneManager.GetActiveScene().name)
             {
                 // 아무 캐릭터가 안죽었을때
-                if (true)
+                if (!IsPlayerDied)
                 {
                     QuestInfoSO.questList[i].quest[0].complete = true;
                     starCount++;
@@ -65,6 +81,8 @@ public class EndUI : MonoBehaviour
                     QuestInfoSO.questList[i].quest[2].complete = true;
                     starCount++;
                 }
+
+				Debug.Log(starCount);
             }
         }
     }
@@ -101,9 +119,6 @@ public class EndUI : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-            WinUIOn();
-        if (Input.GetKeyDown(KeyCode.W))
-            LoseUIOn();
+      
     }
 }
