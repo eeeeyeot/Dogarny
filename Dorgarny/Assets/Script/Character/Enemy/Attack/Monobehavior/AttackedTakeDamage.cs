@@ -11,9 +11,10 @@ public class AttackedTakeDamage : MonoBehaviour, iAttackable
 	public Slider slider;
 	private static List<Transform> players;
     private PlayerStats stats;
-	
 
     Animator anim;
+
+	static bool playerLose = false;
 	
 	private void Awake()
     {
@@ -46,7 +47,6 @@ public class AttackedTakeDamage : MonoBehaviour, iAttackable
 	void CheckDied(){
 		if (stats.GetHealth() <= 0)
 		{
-			EndUI.instance.IsPlayerDied = true;
 			anim.SetTrigger("Die");
 			Debug.Log("1. Player Count " + players.Count);
 			for (int i = 0; i < players.Count; i++)
@@ -66,7 +66,14 @@ public class AttackedTakeDamage : MonoBehaviour, iAttackable
 			GetComponent<NavMeshAgent>().speed = 0f;
 
 			Debug.Log("2. Player Count " + players.Count);
+
+			playerLose = true;
 		}
+	}
+
+	public static bool IsLose()
+	{
+		return playerLose;
 	}
 
 	void WaitForDie(){

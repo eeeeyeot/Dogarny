@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using Assets.Scripts;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : Subject
 {
     public EnemyAttackDefinition demoAttack;
 	public GameObject criticalParticle;
@@ -21,11 +22,13 @@ public class EnemyController : MonoBehaviour
 	GameObject prev_target;
     bool lockAttack;
 	bool isAlive;
-	bool bossDied = true;
+	static bool bossDied = true;
 	
-    void Awake()
+    void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+		Debug.Log("EnemyController Start");
+		AddObserver(GameManager.Instance.missionSO.missionList[1]);
+		agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         stats = GetComponent<EnemyStats>();
         isoCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
@@ -33,12 +36,18 @@ public class EnemyController : MonoBehaviour
 
     private void OnEnable()
     {
+		agent = GetComponent<NavMeshAgent>();
+		anim = GetComponent<Animator>();
+		stats = GetComponent<EnemyStats>();
+		isoCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
+
 		isAlive = true;
 		lockAttack = false;
         ReleaseSpeed();
         prev_target = FindTarget();
         StartCoroutine("ManaRecovery");
-		isoCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
+		isoCamera = Camera.main;
+        anim.SetBool("IsAlive", true);
 	}
 
     void Update()
@@ -56,10 +65,9 @@ public class EnemyController : MonoBehaviour
 				{
 					SetDestination(target.transform.position);
 					anim.SetInteger("LoopState", 1);
-
+                    
 					if (CanAttackTarget(agent.remainingDistance) && !lockAttack && agent.hasPath)
 					{
-						Debug.Log("Enter");
 						AttackTarget(target);
 						agent.speed = 0f;
 						agent.transform.LookAt(target.transform);
@@ -83,8 +91,7 @@ public class EnemyController : MonoBehaviour
 			Death();
 			if(stats.Type == "boss" && bossDied)
 			{
-				Time.timeScale = 0f;
-				EndUI.instance.WinUIOn();
+				//GameManager.Instance.gameState = GameState.Win;
 				bossDied = false;
 			}
 		}
@@ -152,28 +159,41 @@ public class EnemyController : MonoBehaviour
 
     public void ReleaseSpeed()
     {
-        agent.speed = 1.0f;
+		if(agent != null)
+			agent.speed = 1.0f;
         lockAttack = false;
-		criticalParticle.SetActive(false);
+		if( criticalParticle != null ) criticalParticle.SetActive(false);
     }
 
 	void ActiveParticle(){
-		criticalParticle.SetActive(true);
-		ParticleSystem[] particles = criticalParticle.GetComponentsInChildren<ParticleSystem>();
+		if(criticalParticle != null)
+		{
+			criticalParticle.SetActive(true);
+			ParticleSystem[] particles = criticalParticle.GetComponentsInChildren<ParticleSystem>();
 
-		foreach(var p in particles){
-			p.Play();
+			foreach (var p in particles)
+			{
+				p.Play();
+			}
 		}
 	}
 
-	void Death(){
+	void Death()
+	{
 		anim.SetTrigger("Die");
 		agent.speed = 0f;
 		isAlive = false;
 	}
 
-	void WaitForDead(){
-		gameObject.SetActive(false);
+    void BeginingOfDead()
+    {
+		anim.SetBool("IsAlive", false);
+	}
+
+    void WaitForDead()
+    {
+        gameObject.SetActive(false);
+		Notify("MonsterSlayer", 1);
 	}
 	
     public Animator Anim
@@ -183,10 +203,15 @@ public class EnemyController : MonoBehaviour
             return anim;
         }
     }
+
+	public static bool IsWin()
+	{
+		return !bossDied;
+	}
 	
     #region healthBar
     void LookAtCamera(){
-        healthCanvas.transform.LookAt(healthCanvas.transform.position + isoCamera.transform.rotation * Vector3.back, isoCamera.transform.rotation * Vector3.up);
+        healthCanvas.transform.LookAt(healthCanvas.transform.position + isoCamera.transform.rotation * Vector3.forward, isoCamera.transform.rotation * Vector3.up);
     }
     void UpdateHealthBar()
     {

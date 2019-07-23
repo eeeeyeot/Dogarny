@@ -73,9 +73,12 @@ public class Inventory : MonoBehaviour
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.K))
-            Add((Equipment)Resources.Load("ScriptableObject/Items/Warrior/WeaponSheild"));
-
-    }
+            Add((Equipment)Resources.Load("ScriptableObject/Items/Warrior/WeaponSword"));
+        if (Input.GetKeyDown(KeyCode.L))
+            Add((Equipment)Resources.Load("ScriptableObject/Items/Wizard/WeaponStaff"));
+		if (Input.GetKeyDown(KeyCode.J))
+			Add((Equipment)Resources.Load("ScriptableObject/Items/Archer/WeaponBow"));
+	}
 
     public void Remove(Item item)
     {

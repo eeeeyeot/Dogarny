@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: WeaponBow
   m_EditorClassIdentifier: 
   name: Weapon Bow
-  icon: {fileID: 21300000, guid: d7e9a1259fa6545e0926264e9d368df2, type: 3}
+  icon: {fileID: 21300000, guid: 2daa4baed96e9894b9ee5a6e7129888e, type: 3}
   isDefaultItem: 0
+  price: 0
+  category: 0
   equipSlot: 0
   damageModifier: 5
+  armorModifier: 0
   skill:
   - {fileID: 11400000, guid: 167aa5854d72d7d4a8d24b8717fd68be, type: 2}
   - {fileID: 11400000, guid: 7ab5ffec8f60e0d4c970487f1b5810ff, type: 2}

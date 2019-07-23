@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class EquipInventoryUI : MonoBehaviour
 {
+    private Equipment item;
     public Transform rootSlot; // slotroot
     public EquipmentManager equipment = EquipmentManager.instance;
-    public GameObject equipinventoryUI;
-    
+    public GameObject equipInventoryUI;
+    public GameObject itemInfoUI;
+    private string type = "";
     Inventory inventory;
 
     Slot[] slots;
-    
+
     void Start()
     {
         Init();
@@ -25,40 +27,69 @@ public class EquipInventoryUI : MonoBehaviour
 
     public void UpdateUI()
     {
+        int count = 0;
         for (int i = 0; i < slots.Length; i++)
         {
-            //Equipment equipment = (Equipment)inventory.items[i];
-            //if (equipment.equipSlot == category)
-            //{
-                if (i < inventory.items.Count)
+            slots[i].ClearSlot();
+            if (i < inventory.items.Count)
+            {
+                if (inventory.items[i] != null && inventory.items[i].category == Category.Equipment)
                 {
-                    slots[i].AddItem(inventory.items[i]);
+                    Equipment equipment = inventory.items[i] as Equipment;
+                    
+                    switch (type)
+                    {
+                        case "Weapon":
+                            if (equipment.equipSlot == EquipmentSlot.Weapon)
+                            {
+                                slots[count++].AddItem(inventory.items[i]);
+                            }
+                            break;
+                        case "Armor":
+                            if (equipment.equipSlot == EquipmentSlot.Armor)
+                            {
+                                slots[count++].AddItem(inventory.items[i]);
+                            }
+                            break;
+                    }
                 }
-                else
-                {
-                    slots[i].ClearSlot();
-                }
-            //}
+            }
+            slots[i].UpdateUI();
+        }
+
+        for(int i = 0; i < slots.Length; i++)
+        {
             slots[i].UpdateUI();
         }
     }
 
-
-    public void EquipItem(Slot slot)
+    public void EquipItem()
     {
-        Equipment item = (Equipment)slot.item;
         item.Use(CharacterManager.instance.playerIndex);
         UpdateUI();
         CharacterManager.instance.UpdateUI();
+        itemInfoUI.SetActive(false);
     }
 
+    public void ItemInfoUI(Slot slot)
+    {
+        if (slot.item == null)
+            return;
 
+        ItemInfoUIBtn();
+        item = slot.item as Equipment;
+        itemInfoUI.GetComponent<ItemInfoUI>().UpdateUI(item);
+    }
+    public void ItemInfoUIBtn()
+    {
+        itemInfoUI.SetActive(!itemInfoUI.activeSelf);
+    }
 
     public void Clickequipinventory(string type)
     {
-        equipinventoryUI.SetActive(!equipinventoryUI.activeSelf);
-        UpdateUI();
+        this.type = type;
+        equipInventoryUI.SetActive(!equipInventoryUI.activeSelf);
+        if (equipInventoryUI.activeSelf)
+            UpdateUI();
     }
-
-    
 }

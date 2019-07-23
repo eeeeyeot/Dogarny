@@ -7,14 +7,13 @@ public class HitCollider : MonoBehaviour
 	public EnemyStats enemy;
 	public PlayerStats player;
 	public GameObject particleGameObject;
-	ParticleSystem[] particleSystems;
+	ParticleSystem[] _particleSystems;
 
 	private void Start()
 	{
-		particleSystems = new ParticleSystem[particleGameObject.transform.childCount];
-		particleSystems = particleGameObject.GetComponentsInChildren<ParticleSystem>();
-		
-		Debug.Log(particleSystems.Length);
+		_particleSystems = new ParticleSystem[particleGameObject.transform.childCount];
+		_particleSystems = particleGameObject.GetComponentsInChildren<ParticleSystem>();
+		Debug.Log(_particleSystems.Length);
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -25,12 +24,12 @@ public class HitCollider : MonoBehaviour
 		if (other.gameObject.tag == "Enemy")
 		{
 			enemy.TakeDamage(player.GetDamage());
-			Debug.Log("Damage to mob");
-			for (int i = 0; i < particleSystems.Length; i++)
+			for (int i = 0; i < _particleSystems.Length; i++)
 			{
-				particleSystems[i].gameObject.SetActive(true);
-				particleSystems[i].Play();
+				_particleSystems[i].gameObject.SetActive(true);
+				_particleSystems[i].Play();
 			}
+			_particleSystems[0].gameObject.GetComponent<AudioSource>().Play();
 		}
 	}
 

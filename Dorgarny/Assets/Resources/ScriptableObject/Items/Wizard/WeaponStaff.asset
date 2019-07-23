@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: WeaponStaff
   m_EditorClassIdentifier: 
   name: WeaponStaff
-  icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: 378fd878a4f2e0c47a28178e026498b7, type: 3}
   isDefaultItem: 0
+  price: 0
+  category: 0
   equipSlot: 0
   damageModifier: 0
+  armorModifier: 0
   skill:
   - {fileID: 11400000, guid: 1cf854aba5dc5a24d88f06c47cb37371, type: 2}
   - {fileID: 11400000, guid: 8d309627ddb598c4d98168f7f853b0ed, type: 2}

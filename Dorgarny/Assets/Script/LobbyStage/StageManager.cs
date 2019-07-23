@@ -57,6 +57,7 @@ public class StageManager : MonoBehaviour
     {
         foreach(StageInfo stage in stageList)
         {
+			Debug.Log(stage.name);
             stage.UpdateStar(fillStar);
         }
     }

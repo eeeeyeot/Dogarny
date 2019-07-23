@@ -5,6 +5,8 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
+	public delegate void DelSkillCooldown(); 
+	public delegate void SkillDelegate();
 	public static class Constants{
 		public static readonly int PlayerNum = 3;
 		public static readonly int EquipmentWeaponIndex = 0;
@@ -18,8 +20,7 @@ namespace Assets.Scripts
 		Moving,
 		Attack,
 		Dead,
-		Skill1,
-		Skill2
+		Skill
 	}
 
 	public enum PlayerIndex
@@ -34,4 +35,20 @@ namespace Assets.Scripts
         Player,
         Enemy
     }
+
+	public enum GameState
+	{
+		Idle,
+		Win,
+		Lose
+	}
+
+	public enum RPS
+	{
+		None,
+		Wind,
+		Ground,
+		Water,
+		Fire
+	}
 }

@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class EndUI : MonoBehaviour
+public class EndUI : Subject
 {
     public Sprite fillstar;
     public QuestInfo QuestInfoSO;
@@ -12,11 +13,19 @@ public class EndUI : MonoBehaviour
     public Transform stars;
     public List<Text> missiontxtList;
     public List<Text> rewardtxtList;
+	public Text[] previousLevelText = new Text[3];
+	public Text[] presentlyLevelText = new Text[3];
 
-    int starCount;
-    List<Image> starList = new List<Image>();
+	int starCount;
+	int[] previousLvl = new int[3];
+	int[] presentlyLvl = new int[3];
+
+	List<Image> starList = new List<Image>();
     Transform WinUI;
     Transform LoseUI;
+	Transform LevelUpUI;
+
+	bool doOnce = true;
 
 	public bool IsPlayerDied { get; set; }
 
@@ -36,23 +45,55 @@ public class EndUI : MonoBehaviour
 
 	void Start()
     {
+		AddObserver(GameManager.Instance.missionSO.missionList[2]);
         starCount = 0;
         for (int i = 0; i < stars.childCount; i++)
         {
             starList.Add(stars.GetChild(i).GetComponent<Image>());
         }
-        WinUI = this.transform.GetChild(0).GetComponent<Transform>();
-        LoseUI = this.transform.GetChild(1).GetComponent<Transform>();
-    }
+        WinUI = this.transform.Find("WinUI").GetComponent<Transform>();
+        LoseUI = this.transform.Find("LoseUI").GetComponent<Transform>();
+		LevelUpUI = this.transform.Find("LevelUpUI").GetComponent<Transform>();
+
+	}
 
     public void WinUIOn()
     {
-        CheckQuest();
-        DrawWinUI();
-        WinUI.gameObject.SetActive(true);
-    }
+		if (doOnce)
+		{
+			if (GameManager.Instance.missionSO.missionList[2].IsTarget(SceneManager.GetActiveScene().name))
+				Notify("StageClear", 1);
 
-    public void LoseUIOn()
+			Debug.Log("WinUI 호출 성공");
+
+			Time.timeScale = 0f;
+			Debug.Log("WinUI");
+			CheckQuest();
+			DrawWinUI();
+			WinUI.gameObject.SetActive(true);
+
+
+			int i = 0;
+			foreach (var p in GameManager.Instance.playerStats)
+			{
+				previousLvl[i] = p.GetLevel();
+				previousLevelText[i].text = previousLvl[i].ToString();
+				int stageexp = StageList_SO.GetStageInfo().rewardExp;
+				p.IncreaseExp(stageexp);
+				presentlyLvl[i] = p.GetLevel();
+				presentlyLevelText[i].text = presentlyLvl[i++].ToString();
+			}
+
+			if (!presentlyLvl.SequenceEqual(previousLvl))
+			{
+				LevelUpUI.gameObject.SetActive(true);
+			}
+
+			doOnce = false;
+		}
+	}
+
+	public void LoseUIOn()
     {
         LoseUI.gameObject.SetActive(true);
     }
@@ -81,8 +122,6 @@ public class EndUI : MonoBehaviour
                     QuestInfoSO.questList[i].quest[2].complete = true;
                     starCount++;
                 }
-
-				Debug.Log(starCount);
             }
         }
     }
@@ -90,6 +129,7 @@ public class EndUI : MonoBehaviour
     void DrawWinUI()
     {
         int stageStar = 0;
+		
         for (int i = 0; i < starCount; i++)
             starList[i].sprite = fillstar;
 

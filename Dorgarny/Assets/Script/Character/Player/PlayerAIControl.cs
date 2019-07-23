@@ -32,14 +32,14 @@ public class PlayerAIControl : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.FindWithTag("MainPlayer");
-
+        mainPlayer = target = GameObject.FindWithTag("MainPlayer");
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     private void Update()
     {
-        mainPlayer = GameObject.FindWithTag("MainPlayer");
+		if(mainPlayer != null || mainPlayer.tag != "MainPlayer")
+			mainPlayer = GameObject.FindWithTag("MainPlayer");
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemies.Length > 0)
         {
@@ -54,10 +54,9 @@ public class PlayerAIControl : MonoBehaviour
                 }
             }
 
-
 			//인식범위보다 멀거나 메인 플레이어와 거리가 멀어질 경우
-            if (Vector3.Distance(transform.position, nearestEnemy.transform.position) > cognizanceRange &&
-			Vector3.Distance(transform.position, mainPlayer.transform.position) > 1.3f)
+            if (Vector3.Distance(transform.position, nearestEnemy.transform.position) > cognizanceRange ||
+			Vector3.Distance(transform.position, mainPlayer.transform.position) > 1.5f)
             {
                 target = mainPlayer;
             }
@@ -106,7 +105,7 @@ public class PlayerAIControl : MonoBehaviour
             {
                 Agent.speed = 0f;
                 transform.LookAt(target.transform.position);
-                GetComponent<FSMPlayer>().OnAutoAtack();
+                GetComponent<FSMPlayer>().OnAutoAttack();
             }
         }
     }

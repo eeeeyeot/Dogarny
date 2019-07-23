@@ -1,14 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyStats : MonoBehaviour
 {
     public EnemyStats_SO EnemyDefinition = new EnemyStats_SO();
+	public Text text;
+
+	[SerializeField]
+	public Canvas noticeCanvas;
 
     #region Initalizations
     void OnEnable()
     {
+		
         if (!EnemyDefinition.setMenually)
         {
             EnemyDefinition.maxHealth = 100;
@@ -30,7 +36,14 @@ public class EnemyStats : MonoBehaviour
     #region Stat Increasers
     public void IncreaseHealth(float healthAmount)
     {
-        EnemyDefinition.IncreaseHealth(healthAmount);
+		print(gameObject.name + " Get Heals");
+
+		text.text = healthAmount.ToString();
+		text.color = Color.green;
+
+		Instantiate(text, noticeCanvas.transform);
+
+		EnemyDefinition.IncreaseHealth(healthAmount);
     }
 
     public void IncreaseMana(float manaAmount)
@@ -40,9 +53,14 @@ public class EnemyStats : MonoBehaviour
     #endregion
 
     #region Stat Decreasers
-    public void TakeDamage(float amount)
+    public void TakeDamage(float damageAmount)
     {
-        EnemyDefinition.TakeDamage(amount);
+		text.text = damageAmount.ToString();
+		text.color = Color.red;
+
+		Instantiate(text, noticeCanvas.transform.position, noticeCanvas.transform.rotation , noticeCanvas.transform);
+
+		EnemyDefinition.TakeDamage(damageAmount);
         GetComponent<EnemyController>().Anim.SetTrigger("Damaged");
     }
 

@@ -23,6 +23,8 @@ public class PlayerSwapManager : MonoBehaviour
 		{
 			w.tag = "SubPlayer";
 		}
+
+
 	}
 	public void ChangeToWarrior()
 	{
@@ -30,7 +32,6 @@ public class PlayerSwapManager : MonoBehaviour
 		mainPlayer.gameObject.tag = "MainPlayer";
 		
 		mainPlayer.avoidancePriority = 10;
-
 
 		GameObject w;
 		if ((w = GameObject.Find("Archer")) != null)

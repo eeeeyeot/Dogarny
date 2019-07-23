@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(fileName = "StageList", menuName = "StageList")]
 public class StageList_SO : ScriptableObject
@@ -16,4 +16,16 @@ public class StageList_SO : ScriptableObject
     
     public List<StageCombine> stageStarList;
     
+	public StageCombine GetStageInfo()
+	{
+		foreach(var stage in stageStarList)
+		{
+			if(stage.stagename == SceneManager.GetActiveScene().name)
+			{
+				return stage;
+			}
+		}
+
+		return null;
+	}
 }

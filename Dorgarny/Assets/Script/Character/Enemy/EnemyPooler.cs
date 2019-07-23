@@ -10,8 +10,7 @@ public class EnemyPooler : MonoBehaviour
 		public string tag;
 		public GameObject prefab;
 	}
-
-
+	
 	public static EnemyPooler Instance;
 	public List<Enemy> enemies; // FROM UNITY
 	public Dictionary<string, List<GameObject>> enemiesDictionary;
@@ -23,7 +22,6 @@ public class EnemyPooler : MonoBehaviour
 		enemiesDictionary = new Dictionary<string, List<GameObject>>();
 		InitEnemy();
 	}
-
 
     #region Initalizations
     void InitEnemy()
@@ -42,7 +40,6 @@ public class EnemyPooler : MonoBehaviour
 
 			enemiesDictionary.Add(enemy.tag, objectPool);
 		}
-
 	}
     #endregion
 
@@ -91,5 +88,20 @@ public class EnemyPooler : MonoBehaviour
 			}
 		}
 	}
-    #endregion
+	#endregion
+
+	#region checkSurvier
+	public bool checkAllDead()
+	{
+		foreach (Transform child in this.transform)
+		{
+			if (child.gameObject.activeInHierarchy)
+			{
+				return false;
+			}
+		}
+
+		return true;
+	}
+	#endregion
 }

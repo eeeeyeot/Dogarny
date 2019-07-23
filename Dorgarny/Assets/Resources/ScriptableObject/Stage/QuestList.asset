@@ -37,7 +37,7 @@ MonoBehaviour:
       complete: 0
     - quest: "2:30 \uC548\uC5D0 \uD074\uB9AC\uC5B4"
       complete: 0
-  - stagename: map03
+  - stagename: map10
     quest:
     - quest: "\uC544\uBB34 \uCE90\uB9AD\uB3C4 \uC8FD\uC9C0\uC54A\uACE0 \uD074\uB9AC\uC5B4"
       complete: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
       complete: 0
     - quest: "2:30 \uC548\uC5D0 \uD074\uB9AC\uC5B4"
       complete: 0
-  - stagename: map04
+  - stagename: map11
     quest:
     - quest: "\uC544\uBB34 \uCE90\uB9AD\uB3C4 \uC8FD\uC9C0\uC54A\uACE0 \uD074\uB9AC\uC5B4"
       complete: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
       complete: 0
     - quest: "2:30 \uC548\uC5D0 \uD074\uB9AC\uC5B4"
       complete: 0
-  - stagename: map05
+  - stagename: map12
     quest:
     - quest: "\uC544\uBB34 \uCE90\uB9AD\uB3C4 \uC8FD\uC9C0\uC54A\uACE0 \uD074\uB9AC\uC5B4"
       complete: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
       complete: 0
     - quest: "2:30 \uC548\uC5D0 \uD074\uB9AC\uC5B4"
       complete: 0
-  - stagename: map06
+  - stagename: map20
     quest:
     - quest: "\uC544\uBB34 \uCE90\uB9AD\uB3C4 \uC8FD\uC9C0\uC54A\uACE0 \uD074\uB9AC\uC5B4"
       complete: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
       complete: 0
     - quest: "2:30 \uC548\uC5D0 \uD074\uB9AC\uC5B4"
       complete: 0
-  - stagename: map07
+  - stagename: map21
     quest:
     - quest: "\uC544\uBB34 \uCE90\uB9AD\uB3C4 \uC8FD\uC9C0\uC54A\uACE0 \uD074\uB9AC\uC5B4"
       complete: 0
@@ -77,7 +77,7 @@ MonoBehaviour:
       complete: 0
     - quest: "2:30 \uC548\uC5D0 \uD074\uB9AC\uC5B4"
       complete: 0
-  - stagename: map08
+  - stagename: map22
     quest:
     - quest: "\uC544\uBB34 \uCE90\uB9AD\uB3C4 \uC8FD\uC9C0\uC54A\uACE0 \uD074\uB9AC\uC5B4"
       complete: 0

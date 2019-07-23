@@ -25,27 +25,27 @@ MonoBehaviour:
     count: 0
     rewardGold: 300
     rewardExp: 300
-  - stagename: map03
+  - stagename: map10
     count: 0
     rewardGold: 400
     rewardExp: 400
-  - stagename: map04
+  - stagename: map11
     count: 0
     rewardGold: 500
     rewardExp: 500
-  - stagename: map05
+  - stagename: map12
     count: 0
     rewardGold: 600
     rewardExp: 600
-  - stagename: map06
+  - stagename: map20
     count: 0
     rewardGold: 700
     rewardExp: 700
-  - stagename: map07
+  - stagename: map21
     count: 0
     rewardGold: 800
     rewardExp: 800
-  - stagename: map08
+  - stagename: map22
     count: 0
     rewardGold: 900
     rewardExp: 900
