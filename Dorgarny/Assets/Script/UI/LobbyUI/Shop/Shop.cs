@@ -46,10 +46,9 @@ public class Shop : MonoBehaviour
     {
         if (Inventory.instance.Add(slot.item))
         {
-
-            if (GoldManager.Instance.Gold >= slot.item.price)
+            if (GoldManager.instance.Gold >= slot.item.price)
             {
-                GoldManager.Instance.Gold = -(slot.item.price);
+                GoldManager.instance.CalcGold(-(slot.item.price));
             }
         }
     }

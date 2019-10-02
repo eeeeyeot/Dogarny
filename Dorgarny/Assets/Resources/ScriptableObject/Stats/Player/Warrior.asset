@@ -27,7 +27,7 @@ MonoBehaviour:
   maxExp: 100
   viewRange: 1.5
   attackRange: 1
-  weapon: {fileID: 11400000, guid: 35f86e06d2408ce4b86ec0e06a3335e8, type: 2}
+  weapon: {fileID: 0}
   armor: {fileID: 0}
   activeSkill:
   - {fileID: 11400000, guid: 6ffd3a5ccff9668428db772a94d7afe1, type: 2}

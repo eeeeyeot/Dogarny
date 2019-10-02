@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.AI;
 using Util;
+using SimpleJSON;
+using System.IO;
 
 public class StageManager : MonoBehaviour
 {
@@ -111,5 +113,20 @@ public class StageManager : MonoBehaviour
         colliderName = name;
     }
 
+    public void Save()
+    {
+        Debug.Log("Stage Save");
+        JSONObject stageJson = new JSONObject();
+
+        
+
+        string path = Application.persistentDataPath + "/Json/StageData.json";
+        File.WriteAllText(path, stageJson.ToString());
+    }
+
+    public void Load()
+    {
+        Debug.Log("Stage Load");
+    }
 }
 

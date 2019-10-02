@@ -9,6 +9,7 @@ public class Item : ScriptableObject
     public Sprite icon = null;
     public bool isDefaultItem = false;
     public int price = 0;
+    public int count = 0;
     public Category category;
 
     public virtual void Use(int playerIndex = 0)

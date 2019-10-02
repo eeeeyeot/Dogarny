@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abac2848e428e3046bb7eca42f78edfe, type: 3}
-  m_Name: Consume_Potion_002
+  m_Name: Consume_Potion_001
   m_EditorClassIdentifier: Assembly-CSharp::Potion
-  name: Big Potion
-  icon: {fileID: 21300000, guid: 3311e62210f3848e4b59fbd6d1ec3b44, type: 3}
+  name: Small Potion
+  icon: {fileID: 21300000, guid: 6b0b54ce51daa4c4095c9db557bec887, type: 3}
   isDefaultItem: 0
-  price: 1000
-  count: 0
+  price: 300
+  count: 1
   category: 1
-  amount: 100
+  amount: 50

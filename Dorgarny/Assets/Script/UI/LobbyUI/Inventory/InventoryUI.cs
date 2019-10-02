@@ -21,15 +21,11 @@ public class InventoryUI : MonoBehaviour
 
     void UpdateUI()
     {
-        int count = 0;
         for (int i = 0; i < slots.Length; i++)
         {
             if (i < inventory.items.Count)
             {
-                inventory.items_count.TryGetValue(inventory.items[i], out count);
-
-                slots[i].AddItem(inventory.items[i], count);
-
+                slots[i].AddItem(inventory.items[i], inventory.items[i].count);
             }
             else
             {
