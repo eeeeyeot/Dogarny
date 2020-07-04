@@ -13,22 +13,23 @@ MonoBehaviour:
   m_Name: Wizard
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 41893b1fc4426064ba5f471f3aaceba6, type: 3}
+  rps: 0
   setMenually: 1
   saveDataOnClose: 0
-  maxHealth: 140
-  currentHealth: 200
+  maxHealth: 160
+  currentHealth: 134.80334
   maxMana: 100
   currentMana: 100
-  baseDamage: 20
-  baseArmor: 2.1
+  baseDamage: 30
+  baseArmor: 3.1499999
   job: Wizard
   level: 1
-  currentExp: 1
-  maxExp: 140
+  currentExp: 41
+  maxExp: 160
   viewRange: 1.5
   attackRange: 1.5
   weapon: {fileID: 11400000, guid: 670593ea1db170f419caf2dd5575982e, type: 2}
   armor: {fileID: 0}
   activeSkill:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 1cf854aba5dc5a24d88f06c47cb37371, type: 2}
+  - {fileID: 11400000, guid: 8d309627ddb598c4d98168f7f853b0ed, type: 2}

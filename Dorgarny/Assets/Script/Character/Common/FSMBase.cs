@@ -6,27 +6,29 @@ using Assets.Scripts;
 public class FSMBase<T> : MonoBehaviour {
 
 	//개체의 상태가 바꼈는지 체크하는 변수
-	public bool isNewState;
+	protected bool isNewState;
+
+	protected string _name = "";
 
 	//개체 (몬스터, 캐릭터 등)의 상태변화를 제어하는 변수
-	private T chState;
+	private T mState;
 
 	public T CHState
 	{
 		get
 		{
-			return chState;
+			return mState;
 		}
 		set
 		{
-			chState = value;
+			mState = value;
 		}
 	}
 
 	//모든 개체는 씬에 생성되는 순간 Idle 상태가 되며, FSMMain 코루틴 메소드를 실행
 	protected virtual void OnEnable()
 	{
-		CHState = (T)(object)CharacterState.Idle;
+		CHState = (T)(object)GameState.Idle;
 		StartCoroutine(FSMMain());
 	}
 
@@ -37,10 +39,11 @@ public class FSMBase<T> : MonoBehaviour {
 		while (true)
 		{
 			isNewState = false;
-
 			yield return StartCoroutine(CHState.ToString());
 		}
 	}
+
+	
 	
 	//개체의 상태가 바뀔때마다 메소드가 실행된다.
 	public virtual void SetState(T newState)

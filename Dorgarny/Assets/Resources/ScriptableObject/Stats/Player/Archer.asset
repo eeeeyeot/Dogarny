@@ -17,19 +17,19 @@ MonoBehaviour:
   setMenually: 1
   saveDataOnClose: 0
   maxHealth: 160
-  currentHealth: 180
+  currentHealth: 140
   maxMana: 100
   currentMana: 100
   baseDamage: 30
   baseArmor: 3.1499999
   job: Archer
   level: 1
-  currentExp: 0
+  currentExp: 40
   maxExp: 160
   viewRange: 1.7
   attackRange: 1.7
   weapon: {fileID: 11400000, guid: 829111f87dc635e409cdb1d74a482f70, type: 2}
   armor: {fileID: 0}
   activeSkill:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 167aa5854d72d7d4a8d24b8717fd68be, type: 2}
+  - {fileID: 11400000, guid: 7ab5ffec8f60e0d4c970487f1b5810ff, type: 2}

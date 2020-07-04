@@ -61,35 +61,7 @@ public class EndUI : Subject
     {
 		if (doOnce)
 		{
-			if (GameManager.Instance.missionSO.missionList[2].IsTarget(SceneManager.GetActiveScene().name))
-				Notify("StageClear", 1);
-
-			Debug.Log("WinUI 호출 성공");
-
-			Time.timeScale = 0f;
-			Debug.Log("WinUI");
-			CheckQuest();
-			DrawWinUI();
-			WinUI.gameObject.SetActive(true);
-
-
-			int i = 0;
-			foreach (var p in GameManager.Instance.playerStats)
-			{
-				previousLvl[i] = p.GetLevel();
-				previousLevelText[i].text = previousLvl[i].ToString();
-				int stageexp = StageList_SO.GetStageInfo().rewardExp;
-				p.IncreaseExp(stageexp);
-				presentlyLvl[i] = p.GetLevel();
-				presentlyLevelText[i].text = presentlyLvl[i++].ToString();
-			}
-
-			if (!presentlyLvl.SequenceEqual(previousLvl))
-			{
-				LevelUpUI.gameObject.SetActive(true);
-			}
-
-			doOnce = false;
+			StartCoroutine(WaitForClear());
 		}
 	}
 
@@ -156,6 +128,40 @@ public class EndUI : Subject
             }
         }
     }
+
+	IEnumerator WaitForClear() {
+		yield return new WaitForSeconds(1.0f);
+
+		if (GameManager.Instance.missionSO.missionList[2].IsTarget(SceneManager.GetActiveScene().name))
+			Notify("StageClear", 1);
+
+		Debug.Log("WinUI 호출 성공");
+
+		Time.timeScale = 0f;
+		Debug.Log("WinUI");
+		CheckQuest();
+		DrawWinUI();
+		WinUI.gameObject.SetActive(true);
+
+
+		int i = 0;
+		foreach (var p in GameManager.Instance.playerStats)
+		{
+			previousLvl[i] = p.GetLevel();
+			previousLevelText[i].text = previousLvl[i].ToString();
+			int stageexp = StageList_SO.GetStageInfo().rewardExp;
+			p.IncreaseExp(stageexp);
+			presentlyLvl[i] = p.GetLevel();
+			presentlyLevelText[i].text = presentlyLvl[i++].ToString();
+		}
+
+		if (!presentlyLvl.SequenceEqual(previousLvl))
+		{
+			LevelUpUI.gameObject.SetActive(true);
+		}
+
+		doOnce = false;
+	}
 
     private void Update()
     {

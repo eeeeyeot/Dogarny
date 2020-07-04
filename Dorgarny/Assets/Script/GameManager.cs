@@ -71,6 +71,11 @@ public class GameManager : FSMBase<GameState>
 		missionSO = Resources.Load("ScriptableObject/Mission/MissionSO") as MissionSO;
 	}
 
+	private void Start()
+	{
+		_name = "Game Manager";
+	}
+
 	void Update()
 	{
 		time.s += Time.deltaTime;
@@ -96,16 +101,17 @@ public class GameManager : FSMBase<GameState>
 		{
 			
 			yield return null;
-		} while (isNewState);
+		} while (!isNewState);
 	}
 
 	protected virtual IEnumerator Win()
 	{
 		do
 		{
+			Debug.Log("Call WinUI");
 			EndUI.instance.WinUIOn();
 			yield return null;
-		} while (isNewState);
+		} while (!isNewState);
 	}
 
 	protected virtual IEnumerator Lose()
@@ -114,6 +120,6 @@ public class GameManager : FSMBase<GameState>
 		{
 			EndUI.instance.IsPlayerDied = true;
 			yield return null;
-		} while (isNewState);
+		} while (!isNewState);
 	}
 }

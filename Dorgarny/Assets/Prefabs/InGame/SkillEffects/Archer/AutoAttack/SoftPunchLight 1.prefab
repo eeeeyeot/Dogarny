@@ -4696,6 +4696,7 @@ GameObject:
   - component: {fileID: 19853554}
   - component: {fileID: 19948892}
   - component: {fileID: 6521155524428420221}
+  - component: {fileID: 6529939017872306745}
   m_Layer: 0
   m_Name: SoftPunchLight 1
   m_TagString: Untagged
@@ -9468,6 +9469,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6529939017872306745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0928a4ea38ebaf489d0d39b8f4091c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 2
 --- !u!1 &191568
 GameObject:
   m_ObjectHideFlags: 0

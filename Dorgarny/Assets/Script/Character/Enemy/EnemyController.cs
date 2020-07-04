@@ -22,7 +22,7 @@ public class EnemyController : Subject
 	GameObject prev_target;
     bool lockAttack;
 	bool isAlive;
-	static bool bossDied = true;
+	static bool bossDied = false;
 	
     void Start()
     {
@@ -89,10 +89,10 @@ public class EnemyController : Subject
 	{
 		if(stats.GetHealth() <= 0){
 			Death();
-			if(stats.Type == "boss" && bossDied)
+			if(stats.Type == "boss" && !bossDied)
 			{
-				//GameManager.Instance.gameState = GameState.Win;
-				bossDied = false;
+				//GameManager.Instance.SetState(GameState.Win);
+				bossDied = true;
 			}
 		}
 	}
@@ -206,7 +206,7 @@ public class EnemyController : Subject
 
 	public static bool IsWin()
 	{
-		return !bossDied;
+		return bossDied;
 	}
 	
     #region healthBar

@@ -17,6 +17,8 @@ public class PlayerAIControl : MonoBehaviour
     GameObject[] enemies;
     GameObject nearestEnemy;
 
+	public GameObject NearestEnemy{	get { return nearestEnemy; } }
+
     public NavMeshAgent Agent
     {
         get

@@ -38,6 +38,8 @@ public class AttackedTakeDamage : MonoBehaviour, iAttackable
 	public void OnAttack(GameObject attacker, Attack attack)
     {
         stats.TakeDamage(attack.Damage);
+
+
         anim.SetTrigger("Damage");
 
 		//print(stats.GetHealth());

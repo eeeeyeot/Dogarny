@@ -1669,6 +1669,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 65317243935866886, guid: 4adbdf1d368501746a65d10b0559bc68,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.5314674
+      objectReference: {fileID: 0}
+    - target: {fileID: 65317243935866886, guid: 4adbdf1d368501746a65d10b0559bc68,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.046726495
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4adbdf1d368501746a65d10b0559bc68, type: 3}
 --- !u!4 &274986432 stripped
@@ -2267,8 +2277,8 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
-    m_Resolution: 1
+    m_Type: 2
+    m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -2281,7 +2291,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -4539,11 +4549,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.44900003, y: 0.643, z: 0.35000002}
+  m_Extents: {x: 0.44900003, y: 0.643, z: 0.2657337}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.643, z: 0.13100001}
+  m_Center: {x: 0, y: 0.643, z: 0.0467265}
   m_TimeToStationary: 0.5
 --- !u!1001 &2054710966
 PrefabInstance:

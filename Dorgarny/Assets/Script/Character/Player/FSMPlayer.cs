@@ -17,6 +17,7 @@ public class FSMPlayer : FSMBase<CharacterState>
     public Transform effectPos;
 	public Transform effectParent;
 
+	private PlayerAIControl aiControl;
 	private GameObject effect;
 	private Vector3 forward;
     private Ray ray;
@@ -31,6 +32,8 @@ public class FSMPlayer : FSMBase<CharacterState>
 	}
 	private void Start()
 	{
+		_name = "FSM Player";
+		aiControl = GetComponent<PlayerAIControl>();
 		if (hitCollider != null)
 			hitCollider.GetComponent<HitCollider>().player = GetComponent<PlayerStats>();
 	}
@@ -145,6 +148,8 @@ public class FSMPlayer : FSMBase<CharacterState>
     {
         if (lockAttack) return;
 
+		transform.LookAt(aiControl.NearestEnemy.transform.position);
+
         GetComponent<NavMeshAgent>().speed = 1.0f;
 
         if (gameObject.tag == "MainPlayer")
@@ -159,7 +164,7 @@ public class FSMPlayer : FSMBase<CharacterState>
             hitCollider.SetActive(true);
     }
 
-    public void RealeseAttack()
+    public void ReleaseAttack()
     {
         GetComponent<NavMeshAgent>().speed = 2.0f;
         if (gameObject.tag == "MainPlayer")

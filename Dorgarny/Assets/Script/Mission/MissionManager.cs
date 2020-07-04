@@ -35,8 +35,6 @@ public class MissionManager : MonoBehaviour
             if (mission.missionid == title)
 					mission.Reward();
         }
-            
     }
-
 }
 

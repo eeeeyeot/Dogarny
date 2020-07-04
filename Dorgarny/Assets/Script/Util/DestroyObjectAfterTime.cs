@@ -6,7 +6,7 @@ public class DestroyObjectAfterTime : MonoBehaviour
 {
 	public float time = 2.0f;
 	private float speed = 0.3f;
-	RectTransform rectTr;
+	RectTransform rectTr = null;
 
 	void Start()
 	{
@@ -16,6 +16,7 @@ public class DestroyObjectAfterTime : MonoBehaviour
 
 	private void Update()
 	{
-		rectTr.position += (Vector3.up * Time.deltaTime * speed);
+		if(rectTr != null)
+			rectTr.position += (Vector3.up * Time.deltaTime * speed);
 	}
 }
