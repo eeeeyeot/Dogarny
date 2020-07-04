@@ -7,9 +7,8 @@ public class EquipmentWeapon : Equipment
 {
 	public ActiveSkill[] skill = new ActiveSkill[2];
 	
-	public override void Use()
+	public override void Use(int playerIndex)
 	{
-		base.Use();
-		//EquipmentManager.instance.Equip(this);
+        base.Use(playerIndex);
 	}
 }

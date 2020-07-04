@@ -10,6 +10,6 @@ public class Quest
     public string description;
     public int experienceReward;
     public int glodReward;
-    public ItemInfo itemReward;
+    public Item itemReward;
 
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [System.Serializable]
 public class SpawnPoint
@@ -21,16 +22,26 @@ public class EnemySpawner : MonoBehaviour
         enemyPooler = EnemyPooler.Instance;
     }
 
-    //Trigger => 몬스터 SpawnPoint에 스폰
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!isEntered)
-        {
-            if (other.gameObject.tag == "MainPlayer")
-            {
-                enemyPooler.GetPooledObject(spawnPoints);
-                isEntered = true;
-            }
-        }
-    }
+	//Trigger => 몬스터 SpawnPoint에 스폰
+	private void OnTriggerEnter(Collider other)
+	{
+		if (!isEntered)
+		{
+			if (other.gameObject.tag == "MainPlayer")
+			{
+				if (enemyPooler.checkAllDead())
+				{
+					foreach (Transform child in this.transform)
+					{
+						if (child.gameObject.tag == "CheckAllDead")
+						{
+							child.GetComponent<NavMeshObstacle>().enabled = false;
+						}
+					}
+					enemyPooler.GetPooledObject(spawnPoints);
+					isEntered = true;
+				}
+			}
+		}
+	}
 }

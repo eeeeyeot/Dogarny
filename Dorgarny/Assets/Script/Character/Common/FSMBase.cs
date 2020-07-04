@@ -3,41 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts;
 
-public class FSMBase : MonoBehaviour {
-	//Animator 컴포넌트를 제어하는 변수
-	public Animator anim;
+public class FSMBase<T> : MonoBehaviour {
 
-	protected bool lockAttack = false;
+	//개체의 상태가 바꼈는지 체크하는 변수
+	protected bool isNewState;
 
+	protected string _name = "";
 
 	//개체 (몬스터, 캐릭터 등)의 상태변화를 제어하는 변수
-	private CharacterState chState;
-	
-	public CharacterState CHState
+	private T mState;
+
+	public T CHState
 	{
 		get
 		{
-			return chState;
+			return mState;
 		}
 		set
 		{
-			chState = value;
+			mState = value;
 		}
 	}
-
-	//개체의 상태가 바꼈는지 체크하는 변수
-	public bool isNewState;
-
-	protected virtual void Awake()
-	{
-		anim = GetComponent<Animator>();
-	}
-
 
 	//모든 개체는 씬에 생성되는 순간 Idle 상태가 되며, FSMMain 코루틴 메소드를 실행
 	protected virtual void OnEnable()
 	{
-		CHState = CharacterState.Idle;
+		CHState = (T)(object)GameState.Idle;
 		StartCoroutine(FSMMain());
 	}
 
@@ -48,26 +39,17 @@ public class FSMBase : MonoBehaviour {
 		while (true)
 		{
 			isNewState = false;
-			//if (gameObject.tag == "MainPlayer")
 			yield return StartCoroutine(CHState.ToString());
 		}
 	}
-	
 
+	
+	
 	//개체의 상태가 바뀔때마다 메소드가 실행된다.
-	public void SetState(CharacterState newState)
+	public virtual void SetState(T newState)
 	{
 		isNewState = true;
 		CHState = newState;
-
-		//개체가 가진 Animator 컴포넌트의 state Parameters 에게 상태 변화 값을 전달한다.
-		anim.SetInteger("LoopState", (int)CHState);
-	}
-
-	public void SetTrigger(CharacterState newState)
-	{
-		CHState = newState;
-		anim.SetTrigger(newState.ToString());
 	}
 	
 	//모든 개체는 Idle 상태를 가진다.
@@ -77,7 +59,7 @@ public class FSMBase : MonoBehaviour {
 		{
 			//1프레임에 한번만 체크
 			yield return null;
-		} while (!isNewState); //do 문 종료조건
+		} while (isNewState); //do 문 종료조건
 	}
 
 	//상태변화 체크를 코루틴으로 처리한다.

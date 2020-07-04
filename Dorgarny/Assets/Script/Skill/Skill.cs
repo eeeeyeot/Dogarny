@@ -7,12 +7,12 @@ public class Skill : ScriptableObject
 {
 	new public string name = "New Skill";
 	public Sprite icon = null;
-	public float CoolingTime = 0f;
-	public float currentCoolTime = 0f;
-
+	public float CoolDownTime;
+	public float currentCoolTime;
+	public bool SpellIsReady = true;
 
 	public virtual void Use()
 	{
-		Debug.Log("Using Skill : " + name);
+		//Debug.Log("Using Skill : " + name);
 	}
 }

@@ -8,6 +8,15 @@ public class Equipment : Item
 	public EquipmentSlot equipSlot;
 
 	public int damageModifier;
+    public int armorModifier;
+
+    public override void Use(int playerIndex = 0)
+    {
+        //Equip item
+        base.Use();
+        EquipmentManager.instance.Equip(this, playerIndex);
+        RemoveFromInventory();
+    }
 }
 
 

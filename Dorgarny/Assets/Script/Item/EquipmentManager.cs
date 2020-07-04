@@ -15,70 +15,71 @@ public class EquipmentManager : MonoBehaviour
 
 	#endregion
 
-	#region 2D array in Inspector
-	[System.Serializable]
-	struct PlayersEquipment
-	{
-		public Equipment[] currentEquipment;
-	}
-	#endregion
-
 	[SerializeField]
-	PlayersEquipment[] playersEquipment;
-
-	GameObject[] players;
-	int mainPlayerIndex;
-
+    Inventory inventory;
 	private void Start()
 	{
-		Debug.Log("Start");
-		int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
-		playersEquipment = new PlayersEquipment[Constants.PlayerNum];
-		for (int i = 0; i < playersEquipment.Length; i++)
-		{
-			playersEquipment[i].currentEquipment = new Equipment[numSlots];
-		}
+        inventory = Inventory.instance;
+    }
 
-
-		players = new GameObject[GameObject.Find("Players").transform.childCount];
-		for(int i = 0; i < Constants.PlayerNum; i++)
-		{
-			players[i] = GameObject.Find("Players").transform.GetChild(i).gameObject;
-			if(players[i].tag == "MainPlayer")
-			{
-				mainPlayerIndex = i;
-			}
-		}
-	}
 
 
 	//수정해야함 상시가 아닌 인벤토리에서 장착시로
 	//캐릭터 스킬을 위한 기능
-	private void Update()
-	{
-		for(int i = 0; i < Constants.PlayerNum; i++)
-		{
-			if (players[i].tag == "MainPlayer")
-			{
-				mainPlayerIndex = i;
-			}
-		}
+	public void Equip(Equipment newItem, int playerIndex = 0)
+    {
+        int slotIndex = (int)newItem.equipSlot;
+        Equipment oldItem = null;
 
-		if (Input.GetKeyDown(KeyCode.K))
-		{
-			playersEquipment[mainPlayerIndex].currentEquipment[Constants.EquipmentWeaponIndex] = 
-				(Equipment)Resources.Load("ScriptableObject/Items/Wizard/WeaponStaff");
-		}
-
-		if (playersEquipment[mainPlayerIndex].currentEquipment[Constants.EquipmentWeaponIndex] != null)
-		{
-			Equipment equipment = playersEquipment[mainPlayerIndex].currentEquipment[Constants.EquipmentWeaponIndex];
-			PlayerSkillManager.instance.Equip(equipment);
-		}
-		else
-		{
-			PlayerSkillManager.instance.ClearSkills();
-		}
+        switch (slotIndex) {
+            case 0:
+                oldItem = CharacterManager.instance.stats_List[playerIndex].weapon;
+                inventory.Add(oldItem);
+				CharacterManager.instance.stats_List[playerIndex].weapon = (EquipmentWeapon)newItem;
+                break;
+            case 1:
+                oldItem = CharacterManager.instance.stats_List[playerIndex].armor;
+                inventory.Add(oldItem);
+				CharacterManager.instance.stats_List[playerIndex].armor = (EquipmentArmor)newItem;
+                break;
+        }
+		CharacterManager.instance.UpdateUI();
 	}
 	
+    public void Unequip (int playerIndex, int slotIndex)
+    {
+        switch (slotIndex)
+        {
+            case 0:
+                if (CharacterManager.instance.stats_List[playerIndex].weapon != null)
+                {
+                    Equipment oldItem = CharacterManager.instance.stats_List[playerIndex].weapon;
+                    inventory.Add(oldItem);
+
+					CharacterManager.instance.stats_List[playerIndex].weapon = null;
+                    
+                }
+                    break;
+            case 1:
+                if (CharacterManager.instance.stats_List[playerIndex].armor != null)
+                {
+                    Equipment oldItem = CharacterManager.instance.stats_List[playerIndex].armor;
+                    inventory.Add(oldItem);
+
+					CharacterManager.instance.stats_List[playerIndex].weapon = null;
+
+                }
+                break;
+        }
+       
+        
+    }
+
+    public void UnequipAll(int playerIndex)
+    {
+        for(int i = 0; i < Constants.EquipmentItemSlotIndex; i++)
+        {
+            Unequip(playerIndex, i);
+        }
+    }
 }

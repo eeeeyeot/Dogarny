@@ -14,28 +14,16 @@ public class AttackButtonManagement : MonoBehaviour
 		thisBtn.onClick.AddListener(
 			() =>
 			{
-				mainPlayer.GetComponent<FSMPlayer>().OnAutoAtack();
+				mainPlayer.GetComponent<FSMPlayer>().OnAutoAttack();
 			}
 		);
 	}
 
 	private void Update()
 	{
-		if (mainPlayer.tag != GameObject.FindWithTag("MainPlayer").tag)
+		if(mainPlayer == null || mainPlayer.tag !="MainPlayer")
 		{
 			mainPlayer = GameObject.FindWithTag("MainPlayer");
-			thisBtn.onClick.RemoveAllListeners();
 		}
-		else
-		{
-			return;
-		}
-
-		thisBtn.onClick.AddListener(
-			() =>
-			{
-				mainPlayer.GetComponent<FSMPlayer>().OnAutoAtack();
-			}
-		);
 	}
 }

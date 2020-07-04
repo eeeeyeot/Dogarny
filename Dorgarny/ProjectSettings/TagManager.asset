@@ -7,6 +7,9 @@ TagManager:
   - MainPlayer
   - SubPlayer
   - MapModel
+  - Enemy
+  - DeadPlayer
+  - CheckAllDead
   layers:
   - Default
   - TransparentFX
@@ -21,7 +24,7 @@ TagManager:
   - Player1
   - Player2
   - MoveAgent
-  - 
+  - MapLayer
   - 
   - 
   - 
